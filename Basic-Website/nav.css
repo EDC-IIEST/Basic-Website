@@ -7,6 +7,7 @@ body {
     font-family: "Quicksand", sans-serif;
     font-size: 62.5%;
     font-size: 1vh;
+    overflow-x: hidden;
 }
 /*-- Inspiration taken from abdo steif -->
 /* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
@@ -31,7 +32,9 @@ body {
     line-height: 10vh;
     text-align: center;
     padding-top: 1vh;
+    border: #000;
     z-index: 10000;
+
 }
 
 .nav div.logo {
