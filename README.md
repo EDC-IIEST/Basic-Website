@@ -76,7 +76,7 @@ We encourage contributions of all kinds—whether it’s fixing a bug 🐞, enha
    git commit -m "Your descriptive commit message"
    git push origin your-feature-branch
    ```
-4. Open a **Pull Request** and let us know what you’ve contributed!
+4. Open a **Pull Request** and let us know what you’ve contributed along issue number.
 
 ### Best Practices
 
