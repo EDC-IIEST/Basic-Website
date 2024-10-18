@@ -30,7 +30,6 @@ body {
     top:0;
     line-height: 10vh;
     text-align: center;
-    padding-top: 1vh;
     z-index: 10000;
 }
 
@@ -38,8 +37,8 @@ body {
     float: left;
     width: auto;
     height: auto;
-    padding-left: 3em;
-    margin-top: 1vh;
+    padding-left: 1em;
+    margin-top: 1.25rem;
 }
 
 .nav div.logo a {
@@ -58,18 +57,17 @@ body {
 
 
 .nav div.main_list {
-    height: 11vh;
+    height: 9vh;
     float: right;
     padding-right: 4vh;
     max-width: 50vw;
-    
 }
 .container{
     max-height: 0.001vh;
 }
 .nav div.main_list ul {
     width: 100%;
-    height: 11vh;
+    height: 9vh;
     display: flex;
     list-style: none;
     margin: 0;
@@ -78,9 +76,9 @@ body {
 
 .nav div.main_list ul li {
     width: auto;
-    height: 10vh;
+    height: 9vh;
     padding: 0;
-    padding-right: 3em;
+    padding-right: 2em;
 }
 
 .nav div.main_list ul li a {
@@ -88,7 +86,7 @@ body {
     color: #000000;
    
 
-    font-size: 2.5em;
+    font-size: 1.75em;
 }
 
 .nav div.main_list ul li a:hover {
@@ -101,7 +99,7 @@ body {
 
 
 #navbar-logo-image{
-    max-height: 7vh;
+    max-height: 10vh;
     padding: 0.5vh;
     max-width: 100%;
 }
@@ -110,7 +108,7 @@ body {
 #navbar-name{
     font-family: "Cabin Sketch", sans-serif;
 
-font-size: 3vw;
+font-size: 2vw;
 
 color: #000000;
 }
@@ -288,7 +286,7 @@ font-size: 4vh;
     .nav div.main_list ul li a {
         text-align: center;
         width: 100%;
-        font-size: 3rem;
+        font-size: 2rem;
         
     }
     
