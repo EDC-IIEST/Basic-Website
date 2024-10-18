@@ -1,71 +1,116 @@
 /* Team container with responsive grid design */
 .team-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    justify-items: center;
-    width: 80vw;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: start;
-    margin-bottom: 15vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  /* Larger minimum size */
+  gap: 30px;
+  /* Increased spacing between cards */
+  padding: 20px;
+  justify-items: center;
+  width: 90vw;
+  /* Slightly wider for larger screens */
+  margin-left: auto;
+  margin-right: auto;
+  align-items: start;
+  margin-bottom: 15vh;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  /* Slightly increased radius */
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* More pronounced shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Added box-shadow transition */
+  width: 100%;
+  max-width: 350px;
+  /* Adjusted max width for larger cards */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  /* Slightly less aggressive lift */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  /* Enhanced shadow on hover */
+}
+
+.card-details img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  /* Ensures images remain square */
+  border-radius: 10%;
+  /* Softened corners */
+  margin-bottom: 15px;
+  /* Increased margin for better spacing */
+  border: 2px solid #ddd;
+  /* Slightly thicker border */
+}
+
+.text-title {
+  font-size: 1.4rem;
+  /* Increased font size */
+  font-weight: 600;
+  /* Adjusted weight for better readability */
+  margin-bottom: 5px;
+  /* Reduced margin for tighter spacing */
+  color: #333;
+  /* Darker color for better contrast */
+}
+
+.text-body {
+  font-size: 1.8rem;
+  /* Slightly reduced size for hierarchy */
+  font-weight: 700;
+  /* More pronounced weight */
+  color: #000055;
+  /* Consistent color */
+  margin-bottom: 15px;
+  /* Increased margin for better spacing */
+}
+
+.card-button {
+  background-color: #96de00;
+  /* Primary button color */
+  color: #ffffff;
+  /* White text for contrast */
+  border: none;
+  padding: 12px 24px;
+  /* Increased padding for a larger button */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  /* Added transform transition */
+  font-size: 13px;
+  /* Adjusted font size for larger text */
+  font-weight: 600;
+  /* Adjusted font weight */
+}
+
+.card-button:hover {
+  background-color: rgb(65, 147, 255);
+  /* Hover color */
+  transform: scale(1.05);
+  /* Slight scale effect on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .team-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* Smaller cards on mobile */
   }
-  
-  .card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-    width: 100%;
-    max-width: 300px;
+
+  .text-body {
+    font-size: 1.5rem;
+    /* Smaller text on mobile */
   }
-  
-  .card:hover {
-    transform: translateY(-10px);
-  }
-  
-  .card-details img {
-    width: 100%;
-    aspect-ratio: 1/1;
-    border-radius: 10%;
-    margin-bottom: 10px;
-    border :1px solid black;
-  }
-  
+
   .text-title {
     font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+    /* Adjusted title size */
   }
-  
-  .text-body {
-    font-size: 2rem;
-    font-weight: 800;
-    color: #000055;
-    margin-bottom: 20px;
-  }
-  
-  .card-button {
-    background-color: #96de00;
-    color: #000055;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .card-button:hover {
-    background-color:rgb(65, 147, 255);
-  }
-  
-  @media (max-width: 600px) {
-    .team-container {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-  }
-  
+}
