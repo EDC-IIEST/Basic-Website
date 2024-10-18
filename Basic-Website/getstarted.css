@@ -184,3 +184,24 @@
     margin-bottom: 10vh;
     margin-top: 5vh;
 }
+
+.stats {
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.stats p{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.counter{
+    font-size: 75px;
+}
