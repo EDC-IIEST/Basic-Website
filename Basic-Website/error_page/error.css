@@ -1,0 +1,102 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f0f0, #d9d9d9);
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .error-code {
+    font-size: 6rem;
+    font-weight: 700;
+    color: #ff4a4a;
+    margin: 0;
+    line-height: 1;
+  }
+  
+  .error-title {
+    margin-top: 0.5rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.2;
+  }
+  
+  .error-description {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #666;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .button-group {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .button-group a {
+    text-decoration: none;
+  }
+  
+  .go-back-btn,
+  .contact-btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .go-back-btn {
+    display: inline-flex;
+    align-items: center;
+    color: #333;
+    background-color: transparent;
+  }
+  
+  .go-back-btn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .go-back-btn:focus,
+  .go-back-btn:active {
+    outline: none;
+    border: none;
+  }
+  
+  .go-back-btn .icon {
+    margin-right: 8px;
+    transform: rotate(180deg);
+  }
+  
+  .contact-btn {
+    background-color: #000;
+    color: white;
+    border-radius: 8px;
+  }
+  
+  .contact-btn:hover {
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact-btn:focus,
+  .contact-btn:active {
+    outline: none;
+    border: none;
+  }
+  
