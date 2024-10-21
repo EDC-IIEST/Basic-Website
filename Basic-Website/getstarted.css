@@ -22,10 +22,16 @@
     
 
 }
-.social-box img{
-    width:5vh;
+.social-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    column-gap: 2vw;         
 }
-
+.social-box a {
+    color:black;        
+    font-size: 6vh;         
+}
 .white-box-right {
    
     border-radius: 20px;
