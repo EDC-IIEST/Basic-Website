@@ -81,6 +81,7 @@ body {
     height: 10vh;
     padding: 0;
     padding-right: 3em;
+    font-size: 1rem;
 }
 
 .nav div.main_list ul li a {
