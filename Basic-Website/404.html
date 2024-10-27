@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Page Not Found</title>
+    <title>404 - Page Not Found | EDC IIEST Shibpur</title>
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="footer.css">
     <style>
@@ -88,17 +88,14 @@
     <nav class="nav">
         <div class="container">
             <div class="logo">
-                <img id="navbar-logo-image" src="logo.png" alt="logo">
-
+                <img id="navbar-logo-image" src="logo.png" alt="EDC IIEST Logo">
             </div>
             <div id="mainListDiv" class="main_list">
                 <ul class="navlinks">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="events.html">Events</a></li>
                     <li><a href="team.html">Team</a></li>
-                    <li><a href="gallary.html">Gallary</a></li>
-                    <!-- <li><a href="/blog">Explore</a></li> -->
-
+                    <li><a href="gallery.html">Gallery</a></li>
                 </ul>
             </div>
         </div>
@@ -107,7 +104,6 @@
             <i></i>
             <i></i>
         </span>
-
     </nav>
 
     <!-- Error Page Content -->
@@ -129,14 +125,13 @@
             <input type="text" id="search-input" placeholder="Search our site...">
             <button onclick="searchSite()">Search</button>
         </div>
-
     </div>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer__addr">
-            <img src="logo.png" alt="Logo">
-            <h2>Address</h2>
+            <img src="logo.png" alt="EDC Logo">
+            <h2>Contact Us</h2>
             <address>
                 IIEST, Shibpur<br>
                 Howrah, West Bengal, 711103
@@ -166,9 +161,7 @@
                 <h2 class="nav__title">Socials</h2>
                 <ul class="nav__ul">
                     <li><a href="https://www.linkedin.com/company/edciiests/">LinkedIn</a></li>
-                    <li><a
-                            href="https://www.instagram.com/edc.iiests/profilecard/?igsh=MTBpd2dkNDFwbXFybg==">Instagram</a>
-                    </li>
+                    <li><a href="https://www.instagram.com/edc.iiests/profilecard/?igsh=MTBpd2dkNDFwbXFybg==">Instagram</a></li>
                 </ul>
             </li>
         </ul>
@@ -176,12 +169,13 @@
             <p>Copyright EDC IIEST. All rights reserved 2024</p>
         </div>
     </footer>
+
     <!-- JavaScript for Search Functionality -->
     <script>
         function searchSite() {
             const query = document.getElementById('search-input').value;
             if (query) {
-                // Chuyển hướng đến trang tìm kiếm và thêm truy vấn vào URL
+                // Redirect to search results page with the query
                 window.location.href = 'search.html?q=' + encodeURIComponent(query);
             } else {
                 alert('Please enter a search term');
