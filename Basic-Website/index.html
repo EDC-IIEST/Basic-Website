@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="hero.css">
     <link rel="stylesheet" href="infopage.css">
     <link rel="stylesheet" href="getstarted.css">
+    <link rel="stylesheet" href="indexAnimation.css">
 
 
 </head>
@@ -54,11 +55,14 @@
         <div class="infobox">
 
             <div class="infobox-right">
-
-                <div class="info-rightbox-subheading">
-                    EDC IIEST Shibpur
+               
+                     <div class="info-rightbox-subheading">
+                      <h2> EDC IIEST Shibpur</h2>
+                       <div class="styledDiv"></div>
+                   
 
                 </div>
+               
                 <div class="info-rightbox-text">
                   Welcome to EDCell
                   Entrepreneurship Development Cell was set up in the year 2009 under the AICTE initiative and is working under the guidance of the Department of Human Resources Management in co-ordination with NRDC-IIEST IFC, TCGTBI and now with IIC IIESTS.
@@ -73,7 +77,7 @@
             </div>
 
             <div class="infobox-left">
-                <div class="infovideo">
+                <div class="infovideo animateImg">
                     <img src="main.png" alt="">
 
                 </div>
@@ -90,7 +94,7 @@
 </div>
 
 
-<div class="stats">
+<div class="stats animateImg">
 
     <img src="stats.png" alt="">
 </div>
@@ -100,20 +104,20 @@
 
     <div class="white-container">
     <div class="white-box-left">
-        <div class="header-box">
+        <div class="header-box animateImg">
             JOIN OUR COMMUNITY
         </div>
         <div class="social-box">
             <a href="mailto:edc.iiests@gmail.com" target="_blank"><img src="gmail.svg" alt=""></a>
-            <a href="https://www.linkedin.com/company/edciiests/" target="_blank" ><img src="insta.svg" alt=""></a>
-            <a  href="https://www.instagram.com/edc.iiests/profilecard/?igsh=MTBpd2dkNDFwbXFybg==" target="_blank" ><img src="linkdin.svg" alt=""></a>
+            <a href="https://www.instagram.com/edc.iiests/profilecard/?igsh=MTBpd2dkNDFwbXFybg==" target="_blank" ><img src="insta.svg" alt=""></a>
+            <a  href="https://www.linkedin.com/company/edciiests/" target="_blank" ><img src="linkdin.svg" alt=""></a>
             <!-- <a  href="https://github.com/Lightscline" target="_blank"><img src="github.svg" alt=""></a> -->
         </div>
 
     </div>
     
     <div class="white-box-right">
-        <div>
+        <div class="animateImg" >
             <img src="network.png" alt="" class="network">
         </div>
 </div>
@@ -214,6 +218,31 @@
     </div>
   </footer>
 
+  <script>
+    const edcDiv = document.getElementsByClassName("styledDiv")[0]
+    const animateImg = document.getElementsByClassName("animateImg")
+    
+    window.addEventListener("scroll", () => {
+      const edc = edcDiv.getBoundingClientRect()
+      Array.from(animateImg).forEach(img => {
+        const imgRec = img.getBoundingClientRect()
+          if(imgRec.top < window.innerHeight/1.5 && imgRec.bottom > 0){
+          img.classList.add("visible-stats")
+           }
+          else{
+          img.classList.remove("visible-stats")
+          } 
+
+      });
+
+       if(edc.top < window.innerHeight && edc.bottom >0 ){
+         edcDiv.classList.add("styledDivAnimation")
+       }
+       else {
+          edcDiv.classList.remove("styledDivAnimation")
+       }
+    })
+  </script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="nav.js"></script>

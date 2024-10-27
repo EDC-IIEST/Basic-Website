@@ -1,0 +1,54 @@
+@keyframes animateDiv {
+    from {
+        left: 0; /* Start from left */
+    }
+    to {
+        left: 100%; /* Move to the right end */
+    }
+}
+
+
+.info-rightbox-subheading{
+    
+    position: relative;
+}
+
+.styledDiv{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+
+.styledDivAnimation{
+    animation: animateDiv 1s forwards ; 
+}
+
+.visible-stats{
+    opacity: 1 !important;
+}
+
+.animateImg{
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.info-rightbox-button{
+    transition: scale 100ms ease, transform 100ms ease ;
+}
+
+.info-rightbox-button:hover{
+    scale: 1.03;
+    transform: translateX(10px);
+}
+
+.social-box a{
+    transition: scale 400ms ease, transform 400ms ease;
+}
+
+.social-box a:hover{
+    scale: 1.1;
+    transform: translateY(10px);
+}
