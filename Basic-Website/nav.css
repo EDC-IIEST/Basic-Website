@@ -1,548 +1,547 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700");
 html,
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Quicksand", sans-serif;
-    font-size: 62.5%;
-    font-size: 1vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  font-size: 62.5%;
+  font-size: 1vh;
 }
+
+/* ---- Hovering Effect ---------
+------------------------------------------ */
+#mainListDiv > ul > li > a {
+  position: relative;
+}
+
+#mainListDiv > ul > li > a:hover {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+#mainListDiv > ul > li > a::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+  background-color: rgb(165, 223, 21);
+}
+
+#mainListDiv > ul > li > a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* ---------------------------------- */
+
 /*-- Inspiration taken from abdo steif -->
 /* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
 
-
-@media screen and (min-width:3000px)
-{
-    .container{
-        display:flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-} 
+@media screen and (min-width: 3000px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
 /* Navbar section */
 
 .nav {
-    width: 100%;
-    height: 10vh;
-    margin-top: 0px;
-    position:fixed;
-    top:0;
-    line-height: 10vh;
-    text-align: center;
-    padding-top: 1vh;
-    z-index: 10000;
+  width: 100%;
+  height: 10vh;
+  margin-top: 0px;
+  position: fixed;
+  top: 0;
+  line-height: 10vh;
+  text-align: center;
+  padding-top: 1vh;
+  z-index: 10000;
 }
 
 .nav div.logo {
-    float: left;
-    width: auto;
-    height: auto;
-    padding-left: 3em;
-    margin-top: 1vh;
+  float: left;
+  width: auto;
+  height: auto;
+  padding-left: 3em;
+  margin-top: 1vh;
 }
 
 .nav div.logo a {
-    text-decoration: none;
-    color: #000000;
-    font-size: 1.5em;
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.5em;
 }
 
 .nav div.logo a:hover {
-    color: #D8A8F7;
+  color: #d8a8f7;
 }
-.navlinks{
-    justify-content: space-evenly;
-    gap:3vw;
+.navlinks {
+  justify-content: space-evenly;
+  gap: 3vw;
 }
-
 
 .nav div.main_list {
-    height: 11vh;
-    float: right;
-    padding-right: 4vh;
-    max-width: 50vw;
-    
+  height: 11vh;
+  float: right;
+  padding-right: 4vh;
+  max-width: 50vw;
 }
-.container{
-    max-height: 0.001vh;
+.container {
+  max-height: 0.001vh;
 }
 .nav div.main_list ul {
-    width: 100%;
-    height: 11vh;
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  width: 100%;
+  height: 11vh;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav div.main_list ul li {
-    width: auto;
-    height: 10vh;
-    padding: 0;
-    padding-right: 3em;
+  width: auto;
+  height: 10vh;
+  padding: 0;
+  padding-right: 3em;
 }
 
 .nav div.main_list ul li a {
-    text-decoration: none;
-    color: #000000;
-   
+  text-decoration: none;
+  color: #000000;
 
-    font-size: 2.5em;
+  font-size: 2.5em;
 }
 
 .nav div.main_list ul li a:hover {
-    color: #0300d1;
-    cursor: pointer;
+  color: #0300d1;
+  cursor: pointer;
 }
-
 
 /* Home section */
 
-
-#navbar-logo-image{
-    max-height: 7vh;
-    padding: 0.5vh;
-    max-width: 100%;
+#navbar-logo-image {
+  max-height: 7vh;
+  padding: 0.5vh;
+  max-width: 100%;
 }
 
+#navbar-name {
+  font-family: "Cabin Sketch", sans-serif;
 
-#navbar-name{
-    font-family: "Cabin Sketch", sans-serif;
+  font-size: 3vw;
 
-font-size: 3vw;
-
-color: #000000;
+  color: #000000;
 }
-#Demo-navbar{
-    background-color: aliceblue;
-    color: #13072E;
-    border-radius: 10vw;
-    border: 2% white solid;
-    padding: 4%;
-    padding-left: 30%;
-    padding-right: 30%;
-    margin-left: -1vw;
-
+#Demo-navbar {
+  background-color: aliceblue;
+  color: #13072e;
+  border-radius: 10vw;
+  border: 2% white solid;
+  padding: 4%;
+  padding-left: 30%;
+  padding-right: 30%;
+  margin-left: -1vw;
 }
-#resources-button{
-    background-color: #13072E;
-    color: #D8A8F7;
-    border-radius: 10vw;
-    padding-left: 10%;
-    padding-right: 10%;
-    width:100%;
+#resources-button {
+  background-color: #13072e;
+  color: #d8a8f7;
+  border-radius: 10vw;
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 100%;
 }
-.logo
-{
-    display: flex;
-    flex-direction: row;
-    column-gap: 1vw;
-    align-items: center;
-    justify-items: center;
+.logo {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1vw;
+  align-items: center;
+  justify-items: center;
 }
 
-#navbar-name{
-    font-family: "Cabin Sketch", sans-serif;
+#navbar-name {
+  font-family: "Cabin Sketch", sans-serif;
 
-font-size: 4vh;
+  font-size: 4vh;
 
-color: #e9e9e9;
+  color: #e9e9e9;
 }
-
 
 /* Hide the resources box by default */
 .resources-box {
-    display: none;
-    position: absolute; /* Ensure it doesn't disrupt the layout */
-    background-color: transparent; /* Adjust background color as needed */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add some shadow for better visibility */
-    padding: 10px; /* Add some padding for better aesthetics */
-    border-radius: 5px; /* Optional: add rounded corners */
-    z-index: 100000; /* Ensure it's above other elements */
-    min-height: 10vh;
-    margin-top: -5vh;
+  display: none;
+  position: absolute; /* Ensure it doesn't disrupt the layout */
+  background-color: transparent; /* Adjust background color as needed */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add some shadow for better visibility */
+  padding: 10px; /* Add some padding for better aesthetics */
+  border-radius: 5px; /* Optional: add rounded corners */
+  z-index: 100000; /* Ensure it's above other elements */
+  min-height: 10vh;
+  margin-top: -5vh;
 }
-.resources-link{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap:1vh;
-    margin-top: 1vh;
+.resources-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1vh;
+  margin-top: 1vh;
 
-    min-height: 30vh;
+  min-height: 30vh;
 }
 
 /* Show the resources box when hovering over the resources link */
 .resources:hover .resources-box {
-    display: block;
+  display: block;
 }
 
-
-
-
-.resources-link a{
-    all:unset;
-    line-height: 4vh;
-    font-size: 1em;
+.resources-link a {
+  all: unset;
+  line-height: 4vh;
+  font-size: 1em;
 }
-
 
 .navTrigger {
-    display: none;
-    color: #000;
+  display: none;
+  color: #000;
 }
 
 .nav {
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
-
 
 /* Media qurey section */
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .container {
-        margin: 0px;
-    }
+  .container {
+    margin: 0px;
+  }
 }
 
+@media screen and (max-width: 1024px) {
+  .nav div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 1em;
+    max-width: 70vw;
+  }
+  .navTrigger {
+    display: block;
+  }
+  .nav div.logo {
+    margin-left: 15px;
+  }
+  .navlinks {
+    padding-top: 10vh;
+    justify-content: flex-end;
+    gap: 0.04vw;
+  }
 
-@media screen and (max-width:1024px) {
-
-    .nav div.logo {
-        float: left;
-        width: auto;
-        height: auto;
-        padding-left: 1em;
-        max-width: 70vw;
-    }
-    .navTrigger {
-        display: block;
-    }
-    .nav div.logo {
-        margin-left: 15px;
-    }
-    .navlinks{
-        padding-top: 10vh;
-        justify-content: flex-end;
-        gap:0.04vw;
-    }
-
-    #Demo-navbar{
-        background-color: aliceblue;
-        color: #f7f7f7;
-        border-radius: 10vw;
-        padding: 1%;
-        padding-left: 4%;
-        padding-right: 4%;
-
-        
-    
-    }
-#navbar-logo-image{
+  #Demo-navbar {
+    background-color: aliceblue;
+    color: #f7f7f7;
+    border-radius: 10vw;
+    padding: 1%;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  #navbar-logo-image {
     max-height: 8vh;
     padding: 0.5vh;
-}
+  }
 
+  #navbar-name {
+    font-size: 4vh;
+  }
+  .nav div.main_list {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    padding-right: 0.1px;
+    max-width: 100vw;
+  }
+  .nav div.show_list {
+    height: auto;
+    display: none;
+  }
+  .nav div.main_list ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    height: 50vh;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    /*same background color of navbar*/
+    background-position: center top;
+  }
+  .nav div.main_list ul li {
+    width: 100%;
+    text-align: right;
+    padding-right: 10vw;
+  }
+  .nav div.main_list ul li a {
+    text-align: center;
+    width: 100%;
+    font-size: 3rem;
+  }
 
-#navbar-name{
-   
-
-font-size: 4vh;
-
-
-}
-    .nav div.main_list {
-        width: 100%;
-        height: 0;
-        overflow: hidden;
-        padding-right: 0.1px;
-        max-width: 100vw;
-        
-    }
-    .nav div.show_list {
-        height: auto;
-        display: none;
-    }
-    .nav div.main_list ul {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        justify-items: center;
-        width: 100%;
-        height: 50vh;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        background-color: #ffffff;
-        /*same background color of navbar*/
-        background-position: center top;
-    }
-    .nav div.main_list ul li {
-        width: 100%;
-        text-align: right;
-        padding-right: 10vw;
-    }
-    .nav div.main_list ul li a {
-        text-align: center;
-        width: 100%;
-        font-size: 3rem;
-        
-    }
-    
-/* Hide the resources box by default */
-.resources-box {
+  /* Hide the resources box by default */
+  .resources-box {
     display: none;
     position: absolute; /* Ensure it doesn't disrupt the layout */
-    top:20vh;
-    left:5vw;
+    top: 20vh;
+    left: 5vw;
     background-color: transparent; /* Adjust background color as needed */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add some shadow for better visibility */
     border-radius: 5px; /* Optional: add rounded corners */
     z-index: 100000; /* Ensure it's above other elements */
-   
-
-}
-.resources-link{
+  }
+  .resources-link {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    gap:1vh;
+    gap: 1vh;
     min-height: 30vh;
-}
+  }
 
-/* Show the resources box when hovering over the resources link */
-.resources:hover .resources-box {
+  /* Show the resources box when hovering over the resources link */
+  .resources:hover .resources-box {
     display: block;
-}
-#resources-button{
+  }
+  #resources-button {
     background-color: #ffffff;
-    color: #13072E;
+    color: #13072e;
     border-radius: 10vw;
     padding-left: 10%;
     padding-right: 10%;
-    width:100%;
+    width: 100%;
     padding-top: 5%;
     padding-bottom: 5%;
-}
+  }
 
-.resources-link{
+  .resources-link {
     font-size: 1vh;
     max-height: 4vh;
     line-height: 1.2vh;
     max-height: 2vh;
-}
+  }
 
-.resources-link a{
+  .resources-link a {
     font-size: 1vh;
     line-height: 1.2vh;
     max-height: 5vh;
+  }
 }
-
-
-}
-
 
 /* Animation */
 /* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
 
 .navTrigger {
-    cursor: pointer;
-    width: 30px;
-    height: 25px;
-    margin: auto;
-    position: absolute;
-    right: 30px;
-    top: 0;
-    bottom: 0;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  margin: auto;
+  position: absolute;
+  right: 30px;
+  top: 0;
+  bottom: 0;
 }
 
 .navTrigger i {
-    background-color: #000000;
-    border-radius: 2px;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 4px;
+  background-color: #000000;
+  border-radius: 2px;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
 }
 
 .navTrigger i:nth-child(1) {
-    -webkit-animation: outT 0.8s backwards;
-    animation: outT 0.8s backwards;
-    -webkit-animation-direction: reverse;
-    animation-direction: reverse;
+  -webkit-animation: outT 0.8s backwards;
+  animation: outT 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
 }
 
 .navTrigger i:nth-child(2) {
-    margin: 5px 0;
-    -webkit-animation: outM 0.8s backwards;
-    animation: outM 0.8s backwards;
-    -webkit-animation-direction: reverse;
-    animation-direction: reverse;
+  margin: 5px 0;
+  -webkit-animation: outM 0.8s backwards;
+  animation: outM 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
 }
 
 .navTrigger i:nth-child(3) {
-    -webkit-animation: outBtm 0.8s backwards;
-    animation: outBtm 0.8s backwards;
-    -webkit-animation-direction: reverse;
-    animation-direction: reverse;
+  -webkit-animation: outBtm 0.8s backwards;
+  animation: outBtm 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
 }
 
 .navTrigger.active i:nth-child(1) {
-    -webkit-animation: inT 0.8s forwards;
-    animation: inT 0.8s forwards;
+  -webkit-animation: inT 0.8s forwards;
+  animation: inT 0.8s forwards;
 }
 
 .navTrigger.active i:nth-child(2) {
-    -webkit-animation: inM 0.8s forwards;
-    animation: inM 0.8s forwards;
+  -webkit-animation: inM 0.8s forwards;
+  animation: inM 0.8s forwards;
 }
 
 .navTrigger.active i:nth-child(3) {
-    -webkit-animation: inBtm 0.8s forwards;
-    animation: inBtm 0.8s forwards;
+  -webkit-animation: inBtm 0.8s forwards;
+  animation: inBtm 0.8s forwards;
 }
 
 @-webkit-keyframes inM {
-    50% {
-        -webkit-transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(45deg);
-    }
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
 }
 
 @keyframes inM {
-    50% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(45deg);
-    }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
 }
 
 @-webkit-keyframes outM {
-    50% {
-        -webkit-transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(45deg);
-    }
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
 }
 
 @keyframes outM {
-    50% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(45deg);
-    }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
 }
 
 @-webkit-keyframes inT {
-    0% {
-        -webkit-transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        -webkit-transform: translateY(9px) rotate(0deg);
-    }
-    100% {
-        -webkit-transform: translateY(9px) rotate(135deg);
-    }
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(9px) rotate(135deg);
+  }
 }
 
 @keyframes inT {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(9px) rotate(0deg);
-    }
-    100% {
-        transform: translateY(9px) rotate(135deg);
-    }
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(9px) rotate(135deg);
+  }
 }
 
 @-webkit-keyframes outT {
-    0% {
-        -webkit-transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        -webkit-transform: translateY(9px) rotate(0deg);
-    }
-    100% {
-        -webkit-transform: translateY(9px) rotate(135deg);
-    }
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(9px) rotate(135deg);
+  }
 }
 
 @keyframes outT {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(9px) rotate(0deg);
-    }
-    100% {
-        transform: translateY(9px) rotate(135deg);
-    }
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(9px) rotate(135deg);
+  }
 }
 
 @-webkit-keyframes inBtm {
-    0% {
-        -webkit-transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        -webkit-transform: translateY(-9px) rotate(0deg);
-    }
-    100% {
-        -webkit-transform: translateY(-9px) rotate(135deg);
-    }
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-9px) rotate(135deg);
+  }
 }
 
 @keyframes inBtm {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-9px) rotate(0deg);
-    }
-    100% {
-        transform: translateY(-9px) rotate(135deg);
-    }
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-9px) rotate(135deg);
+  }
 }
 
 @-webkit-keyframes outBtm {
-    0% {
-        -webkit-transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        -webkit-transform: translateY(-9px) rotate(0deg);
-    }
-    100% {
-        -webkit-transform: translateY(-9px) rotate(135deg);
-    }
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-9px) rotate(135deg);
+  }
 }
 
 @keyframes outBtm {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-9px) rotate(0deg);
-    }
-    100% {
-        transform: translateY(-9px) rotate(135deg);
-    }
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-9px) rotate(135deg);
+  }
 }
 
 .affix {
-   
-    margin-top: 0;
-    background-color: #ffffff;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border-bottom: 2px solid #000030;
+  margin-top: 0;
+  background-color: #ffffff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom: 2px solid #000030;
 }
