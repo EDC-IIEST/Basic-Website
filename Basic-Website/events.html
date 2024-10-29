@@ -188,6 +188,8 @@
 
   <script>
   const offset = window.innerHeight/2
+  const box1 = document.getElementsByClassName("box1")[0];
+  box1.classList.add('scrollBox');
   window.addEventListener('scroll', () => {
     const box1 = document.getElementsByClassName("box1")[0];
     const box2 = document.getElementsByClassName("box2")[0];
