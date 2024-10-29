@@ -50,7 +50,7 @@
 </div>
 
 <div class="events-container">
-  <div class="event-card">
+  <div class="event-card box1">
     <div class="event-info">
       <h3 class="event-name">ESUMMIT</h3>
       <p>E-Summit is the flagship event of EDC, spanning 2-3 days of dynamic activities. Featuring keynote speakers, interactive games, a Shark Tank competition, and innovative idea presentations, it’s a premier platform for growth and networking. Don’t miss this opportunity to engage with industry leaders, showcase your ideas, and drive your ambitions forward in a vibrant, inspiring environment.</p>
@@ -61,13 +61,14 @@
 
   <div class="event-card">
     <img data-src="events/8.png" alt="ewoke" class="lazy-load event-image">
+
     <div class="event-info">
       <h3 class="event-name">EWOKE</h3>
       <p>E-Woke is EDC’s orientation program designed for freshers. Experience a vibrant introduction to our community with engaging games, interactive sessions, and more. It’s the perfect opportunity to connect with peers, explore EDC’s offerings, and kickstart your journey with us. Join the fun and get ready for an exciting start!</p>
     </div>
   </div>
 
-  <div class="event-card">
+  <div class="event-card box3">
     <div class="event-info">
       <h3 class="event-name">DEEPOTSAV</h3>
       <p>Deepotsav is our grand Diwali celebration, emphasizing prosperity and cultural heritage. Join us for a spectacular event filled with traditional festivities, illuminating lights, and joyful gatherings. It’s one of our most significant cultural celebrations, fostering community spirit and honoring the rich traditions of Diwali.</p>
@@ -76,15 +77,17 @@
 
   </div>
 
+
   <div class="event-card">
     <img data-src="events/10.png" alt="build with us" class="lazy-load event-image">
+
     <div class="event-info">
       <h3 class="event-name">BUILD WITH US</h3>
       <p>Join us for 'Build with US,' an exciting ideathon hosted by EDC! Collaborate with fellow innovators to develop groundbreaking solutions in our hackathon event. Showcase your skills, tackle real-world challenges, and turn your ideas into impactful projects. Don’t miss this opportunity to make a difference and connect with the community!</p>
     </div>
   </div>
 
-  <div class="event-card">
+  <div class="event-card box5">
     <div class="event-info">
       <h3 class="event-name">ECOFUSION</h3>
       <p>EcoFusion, sponsored by Greenovation Club, champions green innovation and sustainability. This event supports startups focused on eco-friendly solutions, encouraging groundbreaking ideas that promote environmental stewardship. Join us to showcase your sustainable projects, network with like-minded entrepreneurs, and drive positive change for a greener future!</p>
@@ -187,9 +190,6 @@
 </footer>
 
 
-  <script data-src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script data-src="nav.js"></script>
-
   <!-- lazy loading -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -231,6 +231,54 @@
       }
     });
   </script>
+
+  <script>
+  const offset = window.innerHeight/2
+  window.addEventListener('scroll', () => {
+    const box1 = document.getElementsByClassName("box1")[0];
+    const box2 = document.getElementsByClassName("box2")[0];
+    const box3 = document.getElementsByClassName("box3")[0];
+    const box4 = document.getElementsByClassName("box4")[0];
+    const box5 = document.getElementsByClassName("box5")[0];
+   
+    const rect1 = box1.getBoundingClientRect()
+    const rect2 = box2.getBoundingClientRect()
+    const rect3 = box3.getBoundingClientRect()
+    const rect4 = box4.getBoundingClientRect()
+    const rect5 = box5.getBoundingClientRect()
+     
+    if (rect1.top < offset && rect1.top > -offset ) { 
+        box1.classList.add('scrollBox');
+    } else {
+        box1.classList.remove('scrollBox');
+    }
+    if (rect2.top < offset && rect2.top > -offset ) { 
+        box2.classList.add('scrollBox');
+    } else {
+        box2.classList.remove('scrollBox');
+    }
+    if (rect3.top < offset && rect3.top > -offset) { 
+        box3.classList.add('scrollBox');
+    } else {
+        box3.classList.remove('scrollBox');
+    }
+    if (rect4.top < offset && rect4.top > -offset ) { 
+        box4.classList.add('scrollBox');
+    } else {
+        box4.classList.remove('scrollBox');
+    }
+    if (rect5.top < offset ) { 
+        box5.classList.add('scrollBox');
+    } else {
+        box5.classList.remove('scrollBox');
+    }
+});
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="nav.js"></script>
+
+
+
 
 </body>
 </html>
