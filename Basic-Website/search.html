@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+
+<body>
+    <h1>Search Results</h1>
+    <div id="results"></div>
+
+    <script>
+
+        const params = new URLSearchParams(window.location.search);
+        const query = params.get('q');
+
+        const pages = [
+            { title: 'Home', url: 'index.html', content: 'Welcome to our homepage' },
+            { title: 'Events', url: 'events.html', content: 'Check out our upcoming events' },
+            { title: 'Team', url: 'team.html', content: 'Meet our team' },
+            { title: 'Gallery', url: 'gallery.html', content: 'Explore our gallery' },
+        ];
+
+
+        const resultsContainer = document.getElementById('results');
+        const results = pages.filter(page => page.content.toLowerCase().includes(query.toLowerCase()));
+
+        if (results.length > 0) {
+            results.forEach(page => {
+                const link = document.createElement('a');
+                link.href = page.url;
+                link.innerText = page.title;
+                resultsContainer.appendChild(link);
+                resultsContainer.appendChild(document.createElement('br'));
+            });
+        } else {
+            resultsContainer.innerText = 'No results found for "' + query + '"';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .error-container {
+            margin: auto;
+        }
+
+        .error-title {
+            font-size: 72px;
+            color: #333;
+            margin: 0;
+        }
+
+        .error-message {
+            font-size: 24px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .error-suggestion {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #444;
+        }
+
+        .quick-links {
+            margin-top: 40px;
+        }
+
+        .quick-links a {
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .search-bar {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-bar input {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            padding: 10px;
+            margin-left: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <img id="navbar-logo-image" src="logo.png" alt="logo">
+
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="gallary.html">Gallary</a></li>
+                    <!-- <li><a href="/blog">Explore</a></li> -->
+
+                </ul>
+            </div>
+        </div>
+        <span class="navTrigger">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
+
+    </nav>
+
+    <!-- Error Page Content -->
+    <div class="error-container">
+        <h1 class="error-title">404</h1>
+        <p class="error-message">Oops! The page you're looking for doesn't exist.</p>
+        <p class="error-suggestion">Try one of the options below to get back on track:</p>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <a href="index.html">Go to Home</a>
+            <a href="events.html">View Events</a>
+            <a href="team.html">Meet the Team</a>
+            <a href="gallery.html">Visit Gallery</a>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search our site...">
+            <button onclick="searchSite()">Search</button>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__addr">
+            <img src="logo.png" alt="Logo">
+            <h2>Address</h2>
+            <address>
+                IIEST, Shibpur<br>
+                Howrah, West Bengal, 711103
+            </address>
+        </div>
+
+        <ul class="footer__nav">
+            <li class="nav__item">
+                <h2 class="nav__title">Company</h2>
+                <ul class="nav__ul">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <h2 class="nav__title">Legal</h2>
+                <ul class="nav__ul">
+                    <li><a href="mailto:iiests.edc@gmail.com">Help</a></li>
+                    <li><a href="mailto:iiests.edc@gmail.com">Contact</a></li>
+                    <li><a href="mailto:iiests.edc@gmail.com">Partnership</a></li>
+                    <li><a href="mailto:iiests.edc@gmail.com">Privacy Policy</a></li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <h2 class="nav__title">Socials</h2>
+                <ul class="nav__ul">
+                    <li><a href="https://www.linkedin.com/company/edciiests/">LinkedIn</a></li>
+                    <li><a
+                            href="https://www.instagram.com/edc.iiests/profilecard/?igsh=MTBpd2dkNDFwbXFybg==">Instagram</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="legal">
+            <p>Copyright EDC IIEST. All rights reserved 2024</p>
+        </div>
+    </footer>
+    <!-- JavaScript for Search Functionality -->
+    <script>
+        function searchSite() {
+            const query = document.getElementById('search-input').value;
+            if (query) {
+                // Chuyển hướng đến trang tìm kiếm và thêm truy vấn vào URL
+                window.location.href = 'search.html?q=' + encodeURIComponent(query);
+            } else {
+                alert('Please enter a search term');
+            }
+        }
+    </script>
+
+</body>
+
+</html>

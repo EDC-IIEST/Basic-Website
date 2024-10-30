@@ -8,6 +8,39 @@ body {
   font-size: 62.5%;
   font-size: 1vh;
 }
+
+/* ---- Hovering Effect ---------
+------------------------------------------ */
+#mainListDiv > ul > li > a {
+  position: relative;
+}
+
+#mainListDiv > ul > li > a:hover {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+#mainListDiv > ul > li > a::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+  background-color: rgb(165, 223, 21);
+}
+
+#mainListDiv > ul > li > a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* ---------------------------------- */
+
 /*-- Inspiration taken from abdo steif -->
 /* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
 
@@ -82,7 +115,6 @@ body {
 .nav div.main_list ul li a {
   text-decoration: none;
   color: #000000;
-
   font-family: poppins, sans-serif;
   font-size: 2.35em;
 }

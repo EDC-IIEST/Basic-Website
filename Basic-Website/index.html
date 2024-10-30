@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+  
     <link rel="stylesheet" href="fonts.css">
+
+    <!-- poppins font -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="hero.css">
     <link rel="stylesheet" href="infopage.css">
     <link rel="stylesheet" href="getstarted.css">
+
+    <script src="https://kit.fontawesome.com/9f1d966d1d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="indexAnimation.css">
 
 
 </head>
@@ -26,7 +33,12 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="/events.html">Events</a></li>
                     <li><a href="/team.html">Team</a></li>
-                    <li><a href="/gallary.html">Gallary</a></li>
+
+                    <li><a href="/gallary.html">Gallery</a></li>
+
+                   
+                    <li><a href="/contact.html">Contact us</a></li>
+
                     <!-- <li><a href="/blog">Explore</a></li> -->
 
                 </ul>
@@ -55,11 +67,14 @@
         <div class="infobox">
 
             <div class="infobox-right">
-
-                <div class="info-rightbox-subheading">
-                    EDC IIEST Shibpur
+               
+                     <div class="info-rightbox-subheading">
+                      <h2> EDC IIEST Shibpur</h2>
+                       <div class="styledDiv"></div>
+                   
 
                 </div>
+               
                 <div class="info-rightbox-text">
                   Welcome to EDCell
                   Entrepreneurship Development Cell was set up in the year 2009 under the AICTE initiative and is working under the guidance of the Department of Human Resources Management in co-ordination with NRDC-IIEST IFC, TCGTBI and now with IIC IIESTS.
@@ -74,7 +89,7 @@
             </div>
 
             <div class="infobox-left">
-                <div class="infovideo">
+                <div class="infovideo animateImg">
                     <img src="main.png" alt="">
 
                 </div>
@@ -91,7 +106,7 @@
 </div>
 
 
-<div class="stats">
+<div class="stats animateImg">
 
     <img src="stats.png" alt="">
 </div>
@@ -101,20 +116,27 @@
 
     <div class="white-container">
     <div class="white-box-left">
-        <div class="header-box">
+        <div class="header-box animateImg">
             JOIN OUR COMMUNITY
         </div>
         <div class="social-box">
-            <a href="mailto:edc.iiests@gmail.com" target="_blank"><img src="gmail.svg" alt=""></a>
-            <a href="https://www.linkedin.com/company/edciiests/" target="_blank" ><img src="insta.svg" alt=""></a>
-            <a  href="https://www.instagram.com/edc.iiests/profilecard/?igsh=MTBpd2dkNDFwbXFybg==" target="_blank" ><img src="linkdin.svg" alt=""></a>
-            <!-- <a  href="https://github.com/Lightscline" target="_blank"><img src="github.svg" alt=""></a> -->
+
+            <a href="mailto:edc.iiests@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.instagram.com/edc.iiests/profilecard/?igsh=MTBpd2dkNDFwbXFybg==" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/edciiests/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-medium"></i></a>
+
+            
         </div>
 
     </div>
 
     <div class="white-box-right">
-        <div>
+        <div class="animateImg" >
             <img src="network.png" alt="" class="network">
         </div>
 </div>
@@ -153,11 +175,11 @@
           </li>
 
           <li>
-            <a href="/team.html">team</a>
+            <a href="/team.html">Team</a>
           </li>
 
           <li>
-            <a href="/gallary.html">Gallary</a>
+            <a href="/gallary.html">Gallery</a>
           </li>
 
         </ul>
@@ -196,12 +218,28 @@
           </li>
 
           <li>
-            <a href="https://www.instagram.com/edc.iiests/profilecard/?igsh=MTBpd2dkNDFwbXFybg==">Facebook</a>
+            <a href=""  target="_blank">Facebook</a>
+
           </li>
 
           <li>
-            <a href="https://www.instagram.com/edc.iiests/profilecard/?igsh=MTBpd2dkNDFwbXFybg==">instagram</a>
+
+            <a href="https://www.instagram.com/edc.iiests/profilecard/?igsh=MTBpd2dkNDFwbXFybg==" target="_blank">Instagram</a>
           </li>
+          <li>
+            <a href="" target="_blank">YouTube</a>
+          </li>
+          <li>
+            <a href="" target="_blank">Medium</a>
+          </li>
+          <li>
+            <a href="" target="_blank">Twitter</a>
+
+          </li>
+          <li>
+            <a href="" target="_blank">GitHub</a>
+          </li>
+        
         </ul>
       </li>
     </ul>
@@ -215,6 +253,31 @@
     </div>
   </footer>
 
+  <script>
+    const edcDiv = document.getElementsByClassName("styledDiv")[0]
+    const animateImg = document.getElementsByClassName("animateImg")
+    
+    window.addEventListener("scroll", () => {
+      const edc = edcDiv.getBoundingClientRect()
+      Array.from(animateImg).forEach(img => {
+        const imgRec = img.getBoundingClientRect()
+          if(imgRec.top < window.innerHeight/1.5 && imgRec.bottom > 0){
+          img.classList.add("visible-stats")
+           }
+          else{
+          img.classList.remove("visible-stats")
+          } 
+
+      });
+
+       if(edc.top < window.innerHeight && edc.bottom >0 ){
+         edcDiv.classList.add("styledDivAnimation")
+       }
+       else {
+          edcDiv.classList.remove("styledDivAnimation")
+       }
+    })
+  </script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="nav.js"></script>
