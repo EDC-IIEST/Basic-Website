@@ -1,3 +1,75 @@
+
+/* Team container with responsive grid design */
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: start;
+  margin-bottom: 15vh;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-details img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 10%;
+  margin-bottom: 10px;
+  border: 1px solid black;
+}
+
+.text-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.text-body {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #000055;
+  margin-bottom: 20px;
+}
+
+.card-button {
+  background-color: #96de00;
+  color: #000055;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: rgb(65, 147, 255);
+}
+
+@media (max-width: 600px) {
+  .team-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
  :root {
             --primary-color: #3b82f6;
             --text-color: #1f2937;
@@ -136,3 +208,4 @@
             font-weight: 400;
             margin: 0;
         }
+

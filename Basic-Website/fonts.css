@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* ---------------------------------------------------
+              Dahlia - file needed
+--------------------------------------------------------------- */
+
+@font-face {
+  font-display: swap;
+  font-family: Dahlia;
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/dahlia.woff2) format("woff2");
+}
+
+/* ---------------------------------------------------
+              MondiaThin - file needed
+--------------------------------------------------------------- */
+
+@font-face {
+  font-display: swap;
+  font-family: MondiaThin;
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/mondia-thin.woff2) format("woff2");
+}
+
+/* ---------------------------------------------------
+              Apercu
+--------------------------------------------------------------- */
+@font-face {
+  font-display: swap;
+  font-family: "Apercu";
+  font-style: normal;
+  font-weight: normal;
+  /* src: url("https://static-assets.codecademy.com/gamut/apercu-regular-pro.woff") format("woff"), url("https://static-assets.codecademy.com/gamut/apercu-regular-pro.woff2") format("woff2"); */
+  src: url(fonts/apercu-regular-pro.woff) format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ApercuBold";
+  font-style: normal;
+  font-weight: bold;
+  /* src: url("https://static-assets.codecademy.com/gamut/apercu-italic-pro.woff") format("woff"), url("https://static-assets.codecademy.com/gamut/apercu-italic-pro.woff2") format("woff2"); */
+  src: url("fonts/apercu-bold-pro.woff") format("woff");
+}
+/* ---------------------------------------------------
+              Suisse
+--------------------------------------------------------------- */
+@font-face {
+  font-display: swap;
+  font-family: "SuisseBold";
+  font-style: normal;
+  font-weight: bold;
+  /* src: url("https://static-assets.codecademy.com/gamut/SuisseIntlMono-Bold-WebS.woff") format("woff"), url("https://static-assets.codecademy.com/gamut/SuisseIntlMono-Bold-WebS.woff2") format("woff2"); */
+  src: url("fonts/SuisseIntlMono-Bold-WebS.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Suisse";
+  font-style: normal;
+  font-weight: normal;
+  /* src: url("https://static-assets.codecademy.com/gamut/SuisseIntlMono-Regular-WebS.woff") format("woff"),url("https://static-assets.codecademy.com/gamut/SuisseIntlMono-Regular-WebS.woff2") format("woff2"); */
+  src: url("fonts/SuisseIntlMono-Regular-WebS.woff") format("woff");
+}
