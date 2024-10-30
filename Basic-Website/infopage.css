@@ -5,6 +5,11 @@
     --circle-color-end: #2d0e63;
   }
 
+  .stats{
+    width: 100%;
+    overflow: hidden;
+  }
+
 
 
 

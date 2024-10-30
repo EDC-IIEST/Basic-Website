@@ -19,13 +19,33 @@
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 5vh;
-    
-
 }
-.social-box img{
-    width:5vh;
+.social-box {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    column-gap: 2vw;         
+    flex-wrap: wrap;        
 }
-
+.social-box a {
+    color: black;        
+    font-size: 7vh;           
+}
+@media screen and (max-width: 768px) {
+    .social-box {
+        flex-wrap: wrap; 
+        justify-content: space-around; 
+        margin-top: 3vh; 
+    }
+}
+@media screen and (max-width: 480px) {
+    .social-box {
+        flex-wrap: wrap;
+        flex-direction: column; 
+        row-gap: 4vh;           
+        margin-top: 5vh;        
+    }
+}
 .white-box-right {
    
     border-radius: 20px;
