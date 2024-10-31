@@ -1,71 +1,138 @@
-/* Team container with responsive grid design */
-.team-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    justify-items: center;
-    width: 80vw;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: start;
-    margin-bottom: 15vh;
-  }
-  
-  .card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-    width: 100%;
-    max-width: 300px;
-  }
-  
-  .card:hover {
-    transform: translateY(-10px);
-  }
-  
-  .card-details img {
-    width: 100%;
-    aspect-ratio: 1/1;
-    border-radius: 10%;
-    margin-bottom: 10px;
-    border :1px solid black;
-  }
-  
-  .text-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .text-body {
-    font-size: 2rem;
-    font-weight: 800;
-    color: #000055;
-    margin-bottom: 20px;
-  }
-  
-  .card-button {
-    background-color: #96de00;
-    color: #000055;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .card-button:hover {
-    background-color:rgb(65, 147, 255);
-  }
-  
-  @media (max-width: 600px) {
-    .team-container {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-  }
-  
+ :root {
+            --primary-color: #3b82f6;
+            --text-color: #1f2937;
+            --background-color: #f3f4f6;
+            --card-background: #ffffff;
+            --hover-color: #4ade80;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+            
+           
+        }
+
+        .team-card {
+            background-color: var(--card-background);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            font-size: 2rem;
+            margin-bottom: 100px;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px) rotate(2deg);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .team-card:hover .card-image {
+            transform: scale(1.1);
+        }
+
+        .card-content {
+            padding: 24px;
+            position: relative;
+            z-index: 2;
+            
+        }
+
+        .card-name {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 0 8px 0;
+        }
+
+        .card-role {
+            font-size: 1.5rem;
+            color: #6b7280;
+            margin: 0 0 20px 0;
+            font-weight: 400;
+        }
+
+        .card-button {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            transform-origin: center;
+            position: relative;
+            z-index: 3;
+            font-size: 1.5rem;
+        }
+
+        .team-card:hover .card-button {
+            background-color: var(--hover-color);
+            color: var(--text-color);
+        }
+
+        .card-button:hover {
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .team-card:hover .card-overlay {
+            opacity: 1;
+        }
+
+        .overlay-content {
+            text-align: center;
+            color: white;
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+            
+        }
+
+        .team-card:hover .overlay-content {
+            transform: translateY(0);
+        }
+
+        .overlay-content h3 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 0 0 8px 0;
+        }
+
+        .overlay-content p {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin: 0;
+        }
