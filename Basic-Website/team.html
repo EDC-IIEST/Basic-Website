@@ -42,103 +42,94 @@
 
     <div class="team-grid" id="teamGrid"></div>
 
-    <footer class="footer">
-      <div class="footer__addr">
-        <img src="logo.png" alt="" />
+  <footer class="footer">
+    <div class="footer__addr">
+        <img src="logo.png" alt="">
 
-        <h2>Address</h2>
 
-        <address>
-          IIEST, shibpur<br />
-          Howrah, West Bengal, 711103
-        </address>
+      <h2>Address</h2>
+
+      <address>
+    IIEST, shibpur<br>
+        Howrah, West Bengal, 711103
+      </address>
+    </div>
+
+    <ul class="footer__nav">
+      <li class="nav__item">
+        <h2 class="nav__title">Company</h2>
+
+        <ul class="nav__ul">
+          <li>
+            <a href="/">Home</a>
+          </li>
+
+          <li>
+            <a href="/events.html">Events</a>
+          </li>
+
+          <li>
+            <a href="/team.html">team</a>
+          </li>
+
+          <li>
+            <a href="/gallary.html">Gallary</a>
+          </li>
+
+        </ul>
+      </li>
+
+      <li class="nav__item ">
+        <h2 class="nav__title">Legal</h2>
+
+        <ul class="nav__ul">
+          <li>
+            <a href="mailto:iiests.edc@gmail.com">Help</a>
+          </li>
+
+          <li>
+            <a href="mailto:iiests.edc@gmail.com">Contact</a>
+          </li>
+
+          <li>
+            <a href="mailto:iiests.edc@gmail.com">Partnership</a>
+          </li>
+
+          <li>
+            <a href="mailto:iiests.edc@gmail.com">Privacy Policy</a>
+          </li>
+
+
+        </ul>
+      </li>
+
+      <li class="nav__item">
+        <h2 class="nav__title">Socials</h2>
+
+        <ul class="nav__ul">
+          <li>
+            <a href="https://www.linkedin.com/company/edciiests/">LinkedIn</a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/edc.iiests/profilecard/?igsh=MTBpd2dkNDFwbXFybg==">Facebook</a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/edc.iiests/profilecard/?igsh=MTBpd2dkNDFwbXFybg==">instagram</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="legal">
+      <p>Copyright EDC IIEST. All rights reserved 2024</p>
+
+      <div class="legal__links">
+        <span>Designed with expertise by <a href="https://www.linkedin.com/in/harshrjn/" style="color: #242424; font-size: 12px;">Harsh Ranjan.</a></span>
       </div>
-
-      <ul class="footer__nav">
-        <li class="nav__item">
-          <h2 class="nav__title">Company</h2>
-
-          <ul class="nav__ul">
-            <li>
-              <a href="/">Home</a>
-            </li>
-
-            <li>
-              <a href="/events.html">Events</a>
-            </li>
-
-            <li>
-              <a href="/team.html">team</a>
-            </li>
-
-            <li>
-              <a href="/gallary.html">Gallary</a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="nav__item">
-          <h2 class="nav__title">Legal</h2>
-
-          <ul class="nav__ul">
-            <li>
-              <a href="mailto:iiests.edc@gmail.com">Help</a>
-            </li>
-
-            <li>
-              <a href="mailto:iiests.edc@gmail.com">Contact</a>
-            </li>
-
-            <li>
-              <a href="mailto:iiests.edc@gmail.com">Partnership</a>
-            </li>
-
-            <li>
-              <a href="mailto:iiests.edc@gmail.com">Privacy Policy</a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="nav__item">
-          <h2 class="nav__title">Socials</h2>
-
-          <ul class="nav__ul">
-            <li>
-              <a href="https://www.linkedin.com/company/edciiests/">LinkedIn</a>
-            </li>
-
-            <li>
-              <a
-                href="https://www.instagram.com/edc.iiests/profilecard/?igsh=MTBpd2dkNDFwbXFybg=="
-                >Facebook</a
-              >
-            </li>
-
-            <li>
-              <a
-                href="https://www.instagram.com/edc.iiests/profilecard/?igsh=MTBpd2dkNDFwbXFybg=="
-                >instagram</a
-              >
-            </li>
-          </ul>
-        </li>
-      </ul>
-
-      <div class="legal">
-        <p>Copyright EDC IIEST. All rights reserved 2024</p>
-
-        <div class="legal__links">
-          <span
-            >Designed with expertise by
-            <a
-              href="https://www.linkedin.com/in/harshrjn/"
-              style="color: #242424; font-size: 12px"
-              >Harsh Ranjan.</a
-            ></span
-          >
-        </div>
-      </div>
-    </footer>
+    </div>
+  </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="nav.js"></script>
@@ -229,7 +220,7 @@
         const card = document.createElement("div");
         card.className = "team-card";
         card.innerHTML = `
-                <img src="${member.image}" alt="${member.name}" class="card-image">
+                <img data-src="${member.image}" alt="${member.name}" class="lazy-load card-image">
                 <div class="card-content">
                     <h3 class="card-name">${member.name}</h3>
                     <p class="card-role">${member.role}</p>
@@ -255,5 +246,47 @@
 
       document.addEventListener("DOMContentLoaded", renderTeamCards);
     </script>
+  
+  <!-- lazy loading -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const lazyImages = document.querySelectorAll('img.lazy-load');
+
+      if ('IntersectionObserver' in window) {
+        let imageObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              let img = entry.target;
+
+              if (img.dataset.src) {
+                console.log(`Loading image: ${img.dataset.src}`);
+                img.src = img.dataset.src;
+                observer.unobserve(img);
+              } else {
+                console.error('Error: data-src is missing for image:', img);
+              }
+            }
+          });
+        });
+
+        lazyImages.forEach(image => {
+          imageObserver.observe(image);
+        });
+
+      } else {
+        console.error('IntersectionObserver not supported in this browser.');
+
+        lazyImages.forEach(img => {
+          if (img.dataset.src) {
+            console.log(`Loading image (no observer): ${img.dataset.src}`);
+            img.src = img.dataset.src;
+            img.classList.remove('lazy-load');
+          } else {
+            console.error('Error: data-src is missing for image:', img);
+          }
+        });
+      }
+    });
+  </script>
   </body>
 </html>
