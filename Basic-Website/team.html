@@ -1,292 +1,464 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="footer.css" />
-    <link rel="stylesheet" href="nav.css" />
-    <link rel="stylesheet" href="hero.css" />
-    <link rel="stylesheet" href="infopage.css" />
-    <link rel="stylesheet" href="getstarted.css" />
-    <link rel="stylesheet" href="events.css" />
-    <link rel="stylesheet" href="ourmission.css" />
-    <link rel="stylesheet" href="team.css" />
-  </head>
-  <body>
-    <nav class="nav">
-      <div class="container">
-        <div class="logo">
-          <img id="navbar-logo-image" src="logo.png" alt="logo" />
-        </div>
-        <div id="mainListDiv" class="main_list">
-          <ul class="navlinks">
-            <li><a href="/">Home</a></li>
-            <li><a href="/events.html">Events</a></li>
-            <li><a href="/team.html">Team</a></li>
-            <li><a href="/gallary.html">Gallary</a></li>
-            <!-- <li><a href="/blog">Explore</a></li> -->
-          </ul>
-        </div>
+    <link rel="stylesheet" href="s.css">
+</head>
+<body>
+  <header>
+  <nav class="nav">
+    <div class="container">
+      <div class="logo">
+        <img id="navbar-logo-image" src="logo.png" alt="logo" />
       </div>
-      <span class="navTrigger">
-        <i></i>
-        <i></i>
-        <i></i>
-      </span>
-    </nav>
-
-    <div class="eventhead">
-      <h1 class="Events">OUR TEAM</h1>
-    </div>
-
-    <div class="team-grid" id="teamGrid"></div>
-
-  <footer class="footer">
-    <div class="footer__addr">
-        <img src="logo.png" alt="">
-
-
-      <h2>Address</h2>
-
-      <address>
-    IIEST, shibpur<br>
-        Howrah, West Bengal, 711103
-      </address>
-    </div>
-
-    <ul class="footer__nav">
-      <li class="nav__item">
-        <h2 class="nav__title">Company</h2>
-
-        <ul class="nav__ul">
-          <li>
-            <a href="/">Home</a>
-          </li>
-
-          <li>
-            <a href="/events.html">Events</a>
-          </li>
-
-          <li>
-            <a href="/team.html">team</a>
-          </li>
-
-          <li>
-            <a href="/gallary.html">Gallary</a>
-          </li>
-
+      <div id="mainListDiv" class="main_list">
+        <ul class="navlinks">
+          <li><a href="/">Home</a></li>
+          <li><a href="/events.html">Events</a></li>
+          <li><a href="/team.html">Team</a></li>
+          <li><a href="/gallary.html">Gallary</a></li>
+          <!-- <li><a href="/blog">Explore</a></li> -->
         </ul>
-      </li>
-
-      <li class="nav__item ">
-        <h2 class="nav__title">Legal</h2>
-
-        <ul class="nav__ul">
-          <li>
-            <a href="mailto:iiests.edc@gmail.com">Help</a>
-          </li>
-
-          <li>
-            <a href="mailto:iiests.edc@gmail.com">Contact</a>
-          </li>
-
-          <li>
-            <a href="mailto:iiests.edc@gmail.com">Partnership</a>
-          </li>
-
-          <li>
-            <a href="mailto:iiests.edc@gmail.com">Privacy Policy</a>
-          </li>
-
-
-        </ul>
-      </li>
-
-      <li class="nav__item">
-        <h2 class="nav__title">Socials</h2>
-
-        <ul class="nav__ul">
-          <li>
-            <a href="https://www.linkedin.com/company/edciiests/">LinkedIn</a>
-          </li>
-
-          <li>
-            <a href="https://www.instagram.com/edc.iiests/profilecard/?igsh=MTBpd2dkNDFwbXFybg==">Facebook</a>
-          </li>
-
-          <li>
-            <a href="https://www.instagram.com/edc.iiests/profilecard/?igsh=MTBpd2dkNDFwbXFybg==">instagram</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-
-    <div class="legal">
-      <p>Copyright EDC IIEST. All rights reserved 2024</p>
-
-      <div class="legal__links">
-        <span>Designed with expertise by <a href="https://www.linkedin.com/in/harshrjn/" style="color: #242424; font-size: 12px;">Harsh Ranjan.</a></span>
       </div>
     </div>
-  </footer>
+    <span class="navTrigger">
+      <i></i>
+      <i></i>
+      <i></i>
+    </span>
+  </nav>
+</header>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="nav.js"></script>
-    <script>
-     const teamMembers = [
-    {
-        name: "Shivang Agrahari",
-        role: "Software Engineer",
-        image: "./team/shivang.jpg",
-        linkedin: "https://www.linkedin.com/in/shivangagrahari02/",
-    },
-    {
-        name: "Raksha",
-        role: "Role Title",
-        image: "./team/raksha.jpg",
-        linkedin: "https://www.linkedin.com/in/rakshapahariya/",
-    },
-    {
-        name: "Rohan",
-        role: "Role Title",
-        image: "./team/rohan.jpg",
-        linkedin: "https://www.linkedin.com/in/rohand2002/",
-    },
-    {
-        name: "Preeti",
-        role: "Role Title",
-        image: "./team/preeti.jpg",
-        linkedin: "https://www.linkedin.com/in/example2/",
-    },
-    {
-        name: "Avinash",
-        role: "Role Title",
-        image: "./team/avinash.jpg",
-        linkedin: "https://www.linkedin.com/in/example2/",
-    },
-    {
-        name: "Arya",
-        role: "Role Title",
-        image: "./team/arya.jpg",
-        linkedin: "https://www.linkedin.com/in/example2/",
-    },
-    {
-        name: "Chhandam",
-        role: "Role Title",
-        image: "./team/chhandam.jpg",
-        linkedin: "https://www.linkedin.com/in/example2/",
-    },
-    {
-        name: "Pulkit",
-        role: "Role Title",
-        image: "./team/pulkit.jpg",
-        linkedin: "https://www.linkedin.com/in/example2/",
-    },
-    {
-        name: "Apratim",
-        role: "Role Title",
-        image: "./team/apratim.jpg",
-        linkedin: "https://www.linkedin.com/in/example2/",
-    },
-    {
-        name: "Jyoti",
-        role: "Role Title",
-        image: "./team/jyotijais.png",
-        linkedin: "https://www.linkedin.com/in/example2/",
-    },
-    {
-        name: "Rounak",
-        role: "Role Title",
-        image: "./team/rounak.jpg",
-        linkedin: "https://www.linkedin.com/in/example2/",
-    },
-    {
-        name: "Prabhat",
-        role: "Role Title",
-        image: "./team/prabhat.jpg",
-        linkedin: "https://www.linkedin.com/in/example2/",
-    },
-    {
-        name: "Dhruv",
-        role: "Role Title",
-        image: "./team/dhruv.jpg",
-        linkedin: "https://www.linkedin.com/in/example2/",
-    }
-];
+  <main>
+
+    <h1>
+      <span class="text-[#4d55ba]">OUR TEAM</span>
+  </h1>
+ 
 
 
-      function createTeamCard(member) {
-        const card = document.createElement("div");
-        card.className = "team-card";
-        card.innerHTML = `
-                <img data-src="${member.image}" alt="${member.name}" class="lazy-load card-image">
-                <div class="card-content">
-                    <h3 class="card-name">${member.name}</h3>
-                    <p class="card-role">${member.role}</p>
-                    <a href="${member.linkedin}" class="card-button" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
-                </div>
-                <div class="card-overlay">
-                    <div class="overlay-content">
-                        <h3>${member.name}</h3>
-                        <p>${member.role}</p>
-                    </div>
-                </div>
-            `;
-        return card;
-      }
+  <!-- Rohan bhaiya -->
+<div class="cards-container">
+   <div class="card" >
+      <div class="upper-part">
+        <div class="upper-part-face">
+            <img src="images/Rohan.jpg" alt="Rohan" class="profile-image">
+          </div>
+          
+      <div class="upper-part-back">Engineer by the day, Entrepreneur by the night </div>
+    </div>
+    <div class="lower-part">
+      <div class="lower-part-face">ROHAN DAS</div>
+      <div class="lower-part-back">
+        <a href="https://www.linkedin.com/in/rohand2002/" class="contact-link">Contact Info</a>
+      </div>     
+    </div>
+  </div>
 
-      function renderTeamCards() {
-        const teamGrid = document.getElementById("teamGrid");
-        teamMembers.forEach((member) => {
-          const card = createTeamCard(member);
-          teamGrid.appendChild(card);
-        });
-      }
 
-      document.addEventListener("DOMContentLoaded", renderTeamCards);
-    </script>
+<!-- Raksha didi -->
+  <div class="card" >
+    <div class="upper-part">
+        <div class="upper-part-face">
+            <img src="images/Raksha.jpg" alt="rakshapahariya" class="profile-image">
+          </div>
+          
+      <div class="upper-part-back">Philomaths</div>
+    </div>
+    <div class="lower-part">
+      <div class="lower-part-face">RAKSHA PAHARIYA</div>
+      <div class="lower-part-back">
+        <a href="https://www.linkedin.com/in/rakshapahariya/" class="contact-link">Contact Info</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- chhandam bhaiya -->
+  <div class="card" >
+    <div class="upper-part">
+        <div class="upper-part-face">
+            <img src="images/Chhandam.jpg" alt="chhandam" class="profile-image">
+          </div>
+          
+      <div class="upper-part-back">Hustle Kar, Cazz Nhi </div>
+    </div>
+    <div class="lower-part">
+      <div class="lower-part-face">CHHANDAM DARIPA</div>
+      <div class="lower-part-back">
+        <a href="https://www.linkedin.com/in/chhandam-daripa-7a0ab6229/" class="contact-link">Contact Info</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Jyoti didi -->
+  <div class="card" >
+    <div class="upper-part">
+        <div class="upper-part-face">
+            <img src="images/Add a heading (2).png" alt="Jyoti" class="profile-image">
+          </div>
+          
+      <div class="upper-part-back">A mole in the rat race </div>
+    </div>
+    <div class="lower-part">
+      <div class="lower-part-face">JYOTI JAISWAL</div>
+      <div class="lower-part-back">
+        <a href="https://www.linkedin.com/in/jyoti-jaiswal-she-her-29aab61b8/" class="contact-link">Contact Info</a>
+      </div>
+    </div>
+  </div>
+
+
+<!-- pulkit bhaiya -->
+  <div class="card" >
+    <div class="upper-part">
+        <div class="upper-part-face">
+            <img src="images/Pulkit.jpg" alt="Pulkit" class="profile-image">
+          </div>
+          
+      <div class="upper-part-back">Stacking Success, One Brick at a Time with E-Cell! </div>
+    </div>
+    <div class="lower-part">
+      <div class="lower-part-face">PULKIT BHARDWAJ</div>
+      <div class="lower-part-back">
+        <a href="https://www.linkedin.com/in/pulkit-bhardwaj-/" class="contact-link">Contact Info</a>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- prity didi -->
+  <div class="card" >
+    <div class="upper-part">
+        <div class="upper-part-face">
+            <img src="images/Prity.jpg" alt="Prity" class="profile-image">
+          </div>
+          
+      <div class="upper-part-back">Chasing deadlines </div>
+    </div>
+    <div class="lower-part">
+      <div class="lower-part-face">PRITY KUMARI</div>
+      <div class="lower-part-back">
+        <a href="https://www.linkedin.com/in/prity-kumari-34867222b/" class="contact-link">Contact Info</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!-- Arya didi -->
+  <div class="card" >
+    <div class="upper-part">
+        <div class="upper-part-face">
+            <img src="images/Arya.jpg" alt="Arya" class="profile-image">
+          </div>
+          
+      <div class="upper-part-back">Maybe the protagonist of your story </div>
+    </div>
+    <div class="lower-part">
+      <div class="lower-part-face">ARYA JAIN</div>
+      <div class="lower-part-back">
+        <a href="https://www.linkedin.com/in/arya-jain-160a54245/" class="contact-link">Contact Info</a>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- Prabhat Verma bhaiya -->
+  <div class="card" >
+    <div class="upper-part">
+        <div class="upper-part-face">
+            <img src="images/Prabhat.jpg" alt="Prabhat" class="profile-image">
+          </div>
+          
+      <div class="upper-part-back">Stacking Success, One Brick at a Time with E-Cell!</div>
+    </div>
+    <div class="lower-part">
+      <div class="lower-part-face">PRABHAT VERMA</div>
+      <div class="lower-part-back">
+        <a href="https://www.linkedin.com/in/prabhat-verma-1pv18h2022/" class="contact-link">Contact Info</a>
+      </div>
+    </div>
+  </div>
+
+
+<!-- rounak bhaiya -->
+  <div class="card" >
+    <div class="upper-part">
+        <div class="upper-part-face">
+            <img src="images/Rounak.jpg" alt="Rounak" class="profile-image">
+          </div>
+          
+      <div class="upper-part-back">Stacking Success, One Brick at a Time with E-Cell!</div>
+    </div>
+    <div class="lower-part">
+      <div class="lower-part-face">ROUNAK CHOUDHURY</div>
+      <div class="lower-part-back">
+        <a href="https://www.linkedin.com/in/rounak-choudhury-215b38229/" class="contact-link">Contact Info</a>
+      </div>
+    </div>
+  </div>
+
+
+<!-- dhruv bhaiya -->
+  <div class="card" >
+    <div class="upper-part">
+        <div class="upper-part-face">
+            <img src="images/Dhruv.jpg" alt="Dhruv" class="profile-image">
+          </div>
+          
+      <div class="upper-part-back">Stacking Success, One Brick at a Time with E-Cell!</div>
+    </div>
+    <div class="lower-part">
+      <div class="lower-part-face">DHRUV JHUNJHUNWALA</div>
+      <div class="lower-part-back">
+        <a href="https://www.linkedin.com/in/dhruv-jhunjhunwala-121021229/" class="contact-link">Contact Info</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- rima didi -->
+  <div class="card" >
+    <div class="upper-part">
+        <div class="upper-part-face">
+            <img src="images/Vikash_2.jpg" alt="Rima" class="profile-image">
+          </div>
+          
+      <div class="upper-part-back">Stacking Success, One Brick at a Time with E-Cell!</div>
+    </div>
+    <div class="lower-part">
+      <div class="lower-part-face">RIMA MUSKAN</div>
+      <div class="lower-part-back">
+        <a href="https://www.linkedin.com/in/rima-muskan-379a80281/" class="contact-link">Contact Info</a>
+      </div>
+    </div>
+  </div>
+
+
+<!-- ujjwal bhaiya -->
+  <div class="card" >
+    <div class="upper-part">
+        <div class="upper-part-face">
+            <img src="images/Ujjwal.jpg" alt="Ujjwal" class="profile-image">
+          </div>
+          
+      <div class="upper-part-back">Stacking Success, One Brick at a Time with E-Cell! </div>
+    </div>
+    <div class="lower-part">
+      <div class="lower-part-face">UJJWAL KUMAR</div>
+      <div class="lower-part-back">
+        <a href="https://www.linkedin.com/in/ujjwal-kumar-4763b02b0/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="contact-link">Contact Info</a>
+      </div>
+    </div>
+  </div>
   
-  <!-- lazy loading -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const lazyImages = document.querySelectorAll('img.lazy-load');
 
-      if ('IntersectionObserver' in window) {
-        let imageObserver = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              let img = entry.target;
 
-              if (img.dataset.src) {
-                console.log(`Loading image: ${img.dataset.src}`);
-                img.src = img.dataset.src;
-                observer.unobserve(img);
-              } else {
-                console.error('Error: data-src is missing for image:', img);
-              }
-            }
-          });
-        });
 
-        lazyImages.forEach(image => {
-          imageObserver.observe(image);
-        });
+<!-- Shreyansh bhaiya -->
+  <div class="card" >
+    <div class="upper-part">
+        <div class="upper-part-face">
+            <img src="images/shreyansh.jpg" alt="Shreyansh" class="profile-image">
+          </div>
+          
+      <div class="upper-part-back">Stacking Success, One Brick at a Time with E-Cell!</div>
+    </div>
+    <div class="lower-part">
+      <div class="lower-part-face">SHREYANSH </div>
+      <div class="lower-part-back">
+        <a href="https://www.linkedin.com/in/shreyansh-srivastava-29b749250/" class="contact-link">Contact Info</a>
+      </div>
+    </div>
+  </div>
 
-      } else {
-        console.error('IntersectionObserver not supported in this browser.');
 
-        lazyImages.forEach(img => {
-          if (img.dataset.src) {
-            console.log(`Loading image (no observer): ${img.dataset.src}`);
-            img.src = img.dataset.src;
-            img.classList.remove('lazy-load');
-          } else {
-            console.error('Error: data-src is missing for image:', img);
-          }
-        });
-      }
-    });
-  </script>
-  </body>
+
+<!-- khushi didi -->
+  <div class="card" >
+    <div class="upper-part">
+        <div class="upper-part-face">
+            <img src="images/Khushi.jpg" alt="Khushi" class="profile-image">
+          </div>
+          
+      <div class="upper-part-back">Building The Best</div>
+    </div>
+    <div class="lower-part">
+      <div class="lower-part-face">KHUSHI SINGAL</div>
+      <div class="lower-part-back">
+        <a href="https://www.linkedin.com/in/khushi-singal/" class="contact-link">Contact Info</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!-- Dipu bhaiya -->
+  <div class="card" >
+    <div class="upper-part">
+        <div class="upper-part-face">
+            <img src="images/Dipu.jpg" alt="Dipu" class="profile-image">
+          </div>
+          
+      <div class="upper-part-back">Crafting the best in self - TDS</div>
+    </div>
+    <div class="lower-part">
+      <div class="lower-part-face">DIPU SHAW</div>
+      <div class="lower-part-back">
+        <a href="https://www.linkedin.com/in/dipu-shaw/" class="contact-link">Contact Info</a>
+      </div>
+    </div>
+  </div>
+
+
+  
+
+<!-- harsh ranjan bhaiya -->
+<div class="card" >
+  <div class="upper-part">
+      <div class="upper-part-face">
+          <img src="images/Harsh ranjan.jpg" alt="Harsh" class="profile-image">
+        </div>
+        
+    <div class="upper-part-back">Stacking Success, One Brick at a Time with E-Cell!</div>
+  </div>
+  <div class="lower-part">
+    <div class="lower-part-face">HARSH RANJAN</div>
+    <div class="lower-part-back">
+      <a href="https://www.linkedin.com/in/harshrjn/" class="contact-link">Contact Info</a>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- vikash bhaiya -->
+  <div class="card" >
+    <div class="upper-part">
+        <div class="upper-part-face">
+            <img src="images/Vikash.jpg" alt="Vikash" class="profile-image">
+          </div>
+          
+      <div class="upper-part-back">Stacking Success, One Brick at a Time with E-Cell!</div>
+    </div>
+    <div class="lower-part">
+      <div class="lower-part-face">VIKASH GOPALAK</div>
+      <div class="lower-part-back">
+        <a href="https://www.linkedin.com/in/vikash-gopalak-6a8133260/" class="contact-link">Contact Info</a>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Amritesh bhaiya -->
+  <div class="card" >
+    <div class="upper-part">
+        <div class="upper-part-face">
+            <img src="images/Amritesh.jpg" alt="Amritesh" class="profile-image">
+          </div>
+          
+      <div class="upper-part-back">Chase the dreams among the stars</div>
+    </div>
+    <div class="lower-part">
+      <div class="lower-part-face">AMRITESH KUMAR</div>
+      <div class="lower-part-back">
+        <a href="https://www.linkedin.com/in/amritesh-kumar-773b9929a/" class="contact-link">Contact Info</a>
+      </div>
+    </div>
+  </div>
+
+
+<!-- kaushal bhaiya -->
+  <div class="card" >
+    <div class="upper-part">
+        <div class="upper-part-face">
+            <img src="images/Kaushal.jpg" alt="Kaushal" class="profile-image">
+          </div>
+          
+      <div class="upper-part-back">We Bring Ideas to Life</div>
+    </div>
+    <div class="lower-part">
+      <div class="lower-part-face">KAUSHAL GUPTA</div>
+      <div class="lower-part-back">
+        <a href="https://www.linkedin.com/in/kaushal-kumar-54aa5225a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="contact-link">Contact Info</a>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- Harsh aggarwal bhaiya -->
+  <div class="card" >
+    <div class="upper-part">
+        <div class="upper-part-face">
+            <img src="images/Harsh.jpg" alt="Harsh" class="profile-image">
+          </div>
+          
+      <div class="upper-part-back">Stacking Success, One Brick at a Time with E-Cell!</div>
+    </div>
+    <div class="lower-part">
+      <div class="lower-part-face">HARSH AGGARWAL</div>
+      <div class="lower-part-back">
+        <a href="https://www.linkedin.com/in/harshagrawal768/" class="contact-link">Contact Info</a>
+      </div>
+    </div>
+  </div>
+
+
+<!-- 
+  ARYAN BHAIYA -->
+  <!-- linkdien -->
+  <div class="card" >
+    <div class="upper-part">
+        <div class="upper-part-face">
+            <img src="images/Aryan.jpg" alt="ARYAN" class="profile-image">
+          </div>
+          
+      <div class="upper-part-back">sheelam param bhushanam</div>
+    </div>
+    <div class="lower-part">
+      <div class="lower-part-face">ARYAN RAJ</div>
+      <div class="lower-part-back">
+        <a href="https://www.linkedin.com/in/vikash-gopalak-6a8133260/" class="contact-link">Contact Info</a>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- tejas bhaiya -->
+  <div class="card" >
+    <div class="upper-part">
+        <div class="upper-part-face">
+            <img src="nature.jpeg" alt="Tejas" class="profile-image">
+          </div>
+          
+      <div class="upper-part-back">Stacking Success, One Brick at a Time with E-Cell!</div>
+    </div>
+    <div class="lower-part">
+      <div class="lower-part-face">TEJAS PAWAR</div>
+      <div class="lower-part-back">
+        <a href="https://www.linkedin.com/in/tejaspawar429/" class="contact-link">Contact Info</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+</div>
+</main>
+</body>
 </html>
