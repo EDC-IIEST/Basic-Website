@@ -1,11 +1,27 @@
 
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+ }
+
+ @font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins/Poppins-Medium.ttf);
+ }
+ 
+ @font-face {
+  font-family: Nunito;
+  src: url(../fonts/Nunito/Nunito-VariableFont_wght.ttf);
+ }
+
 .footer {
+    
     display: flex;
     flex-flow: row wrap;
     margin-top: -5vh;
     padding: 30px 30px 20px 30px;
     color: #060507; 
-    background-color: #ffffff;
+    background-color: white;
     border-top: 3px solid #000055;
     position: relative;
 
@@ -13,6 +29,13 @@
     border-top-right-radius : 15px;
      
   }
+
+  .ubuntu-medium {
+    font-family: "Ubuntu", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
   
   .footer > * {
     flex:  1 100%;
