@@ -74,8 +74,10 @@ h1::before {
 } */
 
 body{
-  background: rgb(134,26,84);
-background: linear-gradient(142deg, rgba(134,26,84,1) 0%, rgba(36,66,115,1) 51%, rgba(134,26,84,1) 100%);
+  /* background: rgb(134,26,84);
+background: linear-gradient(142deg, rgba(134,26,84,1) 0%, rgba(36,66,115,1) 51%, rgba(134,26,84,1) 100%); */
+
+  background: rgb(0, 4 , 34);
 }
 
 h1 {
@@ -116,7 +118,7 @@ main{
 }
 
 nav.nav {
-  background-color: rgb(255, 255, 255, 0.5); /* Set your desired navbar color */
+  background-color: #ffffff80; /* Set your desired navbar color */
   color: black; /* Adjust navbar text color */
   position: sticky; /* Ensure it stays at the top while scrolling */
   top: 0;
@@ -124,13 +126,51 @@ nav.nav {
   padding: 10px 20px;
 }
 
-.cards-container {
+/* .cards-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Creates 5 equal-width columns */
-    gap: 20px; /* Adds space between cards */
-    margin-top: 30px;
+    grid-template-columns: repeat(4, 1fr); Creates 5 equal-width columns */
+    /* gap: 20px; Adds space between cards */
+    /* margin-top: 30px;
     margin-left: 80px;
+} */
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns on large screens  */
+  gap: 20px;
+  margin-top: 30px;
+  margin-left: 80px;
 }
+
+
+@media (max-width: 770px) {
+  .cards-container {
+    justify-content: center; /* Ensure the cards remain centered */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .card {
+    flex: 0 1 calc(100% - 40px); /* Adjust width for cards to fit properly */
+    max-width: 300px; /* Optional: set a max width for the cards */
+  }
+}
+
+/* Adjust for medium screens (tablets) */
+@media (max-width: 1024px) {
+  .cards-container {
+      grid-template-columns: repeat(3, 1fr); /* 2 columns for smaller screens */
+      margin-left: 40px; /* Reduce left margin */
+  }
+}
+
+/* Adjust for small screens (mobile phones) */
+@media (max-width: 768px) {
+  .cards-container {
+      grid-template-columns: repeat(2, 1fr); /* 1 column for mobile */
+      margin-left: 20px; /* Further reduce left margin */
+  }
+}
+
 
 .card {
     width: 100%;
@@ -171,8 +211,8 @@ img{
   .upper-part-back {
     text-align: center;
     background-color: rgb(210, 250, 237);
-    color: purple;
-    border: 3px solid rgb(226, 124, 226);
+    color: rgb(30, 29, 92);
+    border: 3px solid #E0E0E0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -207,11 +247,11 @@ img{
   
   .lower-part-face,
 .lower-part-back {
-  background-color: rgb(226, 124, 226);
+  background-color: #E0E0E0;
   width: 100%;
   height: 100%;
   color: rgb(55, 10, 87);
-  border: 3px solid rgb(226, 124, 226);
+  border: 3px solid #E0E0E0;
   font-weight: bold;
   position: absolute;
   border-radius: 0 0 40px 40px;
@@ -244,7 +284,7 @@ img{
   }
   
   .card:hover > .lower-part > .lower-part-back {
-    border: 3px solid rgb(226, 124, 226);
+    border: 3px solid #E0E0E0;
     border-radius: 0 0 40px 40px;
   }
 
