@@ -20,7 +20,7 @@ body {
 
 
 ::selection {
-  color: #fff;
+  color: #000;
   background: #007bff;
 }
 
@@ -216,6 +216,8 @@ h4{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: black;
+
 }
 
 .details .title {
@@ -302,10 +304,22 @@ h4{
   }
 
   .top-content .items span {
-    margin: 5px;
+    margin: 1px;
+    font-size: 9px;
   }
 
   .gallery .image {
     width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  h3{
+    font-size: 15;
+  }
+
+  .top-content .items span {
+    margin: 0.8px;
+    font-size: 7px;
   }
 }
