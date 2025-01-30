@@ -1,138 +1,851 @@
- :root {
-            --primary-color: #3b82f6;
-            --text-color: #1f2937;
-            --background-color: #f3f4f6;
-            --card-background: #ffffff;
-            --hover-color: #4ade80;
-        }
+/* From Uiverse.io by zakareaaljundi */ 
+/* body{
+    background-color: rgb(51, 56, 68);
+} */
 
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 24px;
-            max-width: 1200px;
-            margin: 0 auto;
-            
-           
-        }
+/* body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+} */
+@import url(https://fonts.googleapis.com/css?family=Lato:300,700,300italic);
 
-        .team-card {
-            background-color: var(--card-background);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            font-size: 2rem;
-            margin-bottom: 100px;
-        }
 
-        .team-card:hover {
-            transform: translateY(-5px) rotate(2deg);
-            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
-        }
+html, body {
+  height: 100%;
+  margin: 0; /* Ensures no default margin */
+  padding: 0; /* Ensures no default padding */
+  overflow-x: hidden; 
+}
 
-        .card-image {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
+h1 {
+  font-weight: normal;
+  font-size: 35px;
+  position: relative;
+  margin: 40px 0;
+}
 
-        .team-card:hover .card-image {
-            transform: scale(1.1);
-        }
+h1::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: animate 4s linear infinite;
+}
 
-        .card-content {
-            padding: 24px;
-            position: relative;
-            z-index: 2;
-            
-        }
+@keyframes animate {
+  0% {
+      width: 100px;
+  }
+  50% {
+      width: 200px;
+  }
+  100% {
+      width: 100px;
+  }
+}
 
-        .card-name {
-            font-size: 2rem;
-            font-weight: 700;
-            margin: 0 0 8px 0;
-        }
+.top-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(243, 243, 243);
+  width: 90%;
+  margin: 0 auto 20px auto;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px lightgray;
+  padding: 10px;
+}
 
-        .card-role {
-            font-size: 1.5rem;
-            color: #6b7280;
-            margin: 0 0 20px 0;
-            font-weight: 400;
-        }
+/* body {
+  align-items: center;
+  background-image: linear-gradient(to right, #c23fe2,#054f7d,#0c4574,#861a54,#054f7d);
+  background-size: 600%;
+  background-position: 0 0;
+  box-shadow: inset 0 0 5em rgba(0,0,0,.5);
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-name: gradients; 
+} */
 
-        .card-button {
-            display: inline-block;
-            padding: 12px 20px;
-            background-color: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-size: 1rem;
-            font-weight: 600;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            transform-origin: center;
-            position: relative;
-            z-index: 3;
-            font-size: 1.5rem;
-        }
+body{
+  /* background: rgb(134,26,84);
+background: linear-gradient(142deg, rgba(134,26,84,1) 0%, rgba(36,66,115,1) 51%, rgba(134,26,84,1) 100%); */
 
-        .team-card:hover .card-button {
-            background-color: var(--hover-color);
-            color: var(--text-color);
-        }
+  background: rgb(0, 4 , 34);
+}
 
-        .card-button:hover {
-            animation: pulse 1s infinite;
-        }
+h1 {
+  color: white;
+  font-size: 2.4em;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (max-width: 830px) {
+  h1 {
+    font-size: 2em;
+  }
+}
+@keyframes gradients {
+    0%   {background-position: 0 0;}
+    25% {background-position: 50% 0;}
+    50% {background-position: 90% 0;}
+    60% {background-position: 60%;}
+    75% {background-position: 40%;}
+    100%  {background-position: 0 0;}
+}
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 
-        .card-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            pointer-events: none;
-        }
 
-        .team-card:hover .card-overlay {
-            opacity: 1;
-        }
+main{
+  font-size: 15px;
+}
 
-        .overlay-content {
-            text-align: center;
-            color: white;
-            transform: translateY(20px);
-            transition: transform 0.3s ease;
-            
-        }
+nav.nav {
+  background-color: #ffffff80; /* Set your desired navbar color */
+  color: black; /* Adjust navbar text color */
+  position: sticky; /* Ensure it stays at the top while scrolling */
+  top: 0;
+  z-index: 10; /* Keep it above other content */
+  padding: 10px 20px;
+}
 
-        .team-card:hover .overlay-content {
-            transform: translateY(0);
-        }
+/* .cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); Creates 5 equal-width columns */
+    /* gap: 20px; Adds space between cards */
+    /* margin-top: 30px;
+    margin-left: 80px;
+} */
 
-        .overlay-content h3 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin: 0 0 8px 0;
-        }
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 4 equal-width columns on large screens  */
+  row-gap: 20px; /* Adds space between rows */
+  width: 100vw;
+  margin: auto auto;
+}
 
-        .overlay-content p {
-            font-size: 1.2rem;
-            font-weight: 400;
-            margin: 0;
-        }
+
+@media (max-width: 770px) {
+  .cards-container {
+    justify-content: center; /* Ensure the cards remain centered */
+     /* Adjust padding for smaller screens */
+  }
+
+  .card {
+    flex: 0 1 calc(100% - 40px); /* Adjust width for cards to fit properly */
+    max-width: 300px; /* Optional: set a max width for the cards */
+  }
+}
+
+/* Adjust for medium screens (tablets) */
+@media (max-width: 1024px) {
+  .cards-container {
+      grid-template-columns: repeat(3, 1fr); /* 2 columns for smaller screens */
+     
+  }
+}
+
+/* Adjust for small screens (mobile phones) */
+@media (max-width: 768px) {
+  .cards-container {
+      grid-template-columns: repeat(2, 1fr); /* 1 column for mobile */
+      
+  }
+}
+
+
+.card {
+    width: 100%;
+    width: 190px;
+    height: 254px;
+    margin: auto;
+    position: relative;
+    border-radius: 40px;
+    transition: all 0.8s;
+    perspective: 600px;
+    perspective-origin: center bottom;
+    margin-top: 20px;
+  }
+  
+  .upper-part {
+    width: 100%;
+    height: 65%;
+    border-radius: 40px 40px 0 0;
+    position: relative;
+    transform-style: preserve-3d;
+    /* transform-origin: center bottom; */
+    transition: all 0.9s;
+   
+  }
+/* 
+  .upper-part-face{
+    background-size: cover;
+    width: 50%;
+  } */
+img{ 
+    /* background-size: cover; */
+    width: 100%;
+    height: 100%;
+    border-radius: 37px 37px 0 0;
+  }
+
+
+  .upper-part-face,
+  .upper-part-back {
+    text-align: center;
+    background-color: rgb(210, 250, 237);
+    color: rgb(30, 29, 92);
+    border: 3px solid #E0E0E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* padding: 15px; */
+    border-radius: 40px 40px 0 0;
+    font-weight: bold;
+    z-index: 2;
+    backface-visibility: hidden;
+    transition: all 0.6s;
+
+  }
+  
+  .upper-part-back {
+    background-color: rgb(226, 124, 226);
+    color: purple;
+    transform: rotatex(180deg);
+  }
+  
+  .lower-part {
+    width: 100%;
+    height: 35%;
+    border-radius: 0 0 40px 40px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform-origin: center top;
+    transition: all 0.9s;
+   
+  }
+  
+  .lower-part-face,
+.lower-part-back {
+  background-color: #E0E0E0;
+  width: 100%;
+  height: 100%;
+  color: rgb(55, 10, 87);
+  border: 3px solid #E0E0E0;
+  font-weight: bold;
+  position: absolute;
+  border-radius: 0 0 40px 40px;
+  display: flex;
+  /* padding: 15px;  */
+  justify-content: center;
+  align-items: center;
+  transform: translate(0, -0.8px);
+  backface-visibility: hidden;
+  z-index: 2;
+}
+  
+  .lower-part-back {
+    backface-visibility: visible;
+    border-radius: 40px;
+    color:purple;
+    background-color: lightgray;
+    transform: rotateX(180deg);
+    z-index: 1;
+    transition: border-radius 0.6s;
+  }
+  
+  .card:hover > .upper-part {
+    transform: rotateX(-0.5turn);
+   
+  }
+  
+  .card:hover > .lower-part {
+    transform: translateY(88.3px) rotateX(0.5turn);
+  }
+  
+  .card:hover > .lower-part > .lower-part-back {
+    border: 3px solid #E0E0E0;
+    border-radius: 0 0 40px 40px;
+  }
+
+  .contact-link {
+    text-decoration: none;  
+    border: none;           
+}
+
+
+/* nav bar */
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  font-size: 62.5%;
+  font-size: 1vh;
+}
+
+/* ---- Hovering Effect ---------
+------------------------------------------ */
+#mainListDiv > ul > li > a {
+  position: relative;
+}
+
+#mainListDiv > ul > li > a:hover {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+#mainListDiv > ul > li > a::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+  background-color: rgb(226, 124, 226);
+}
+
+#mainListDiv > ul > li > a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* ---------------------------------- */
+
+/*-- Inspiration taken from abdo steif -->
+/* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
+
+@media screen and (min-width: 3000px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+
+
+
+
+/* Navbar section */
+
+.nav {
+  width: 100%;
+  height: 10vh;
+  margin-top: 0px;
+  position: fixed;
+  top: 0;
+  line-height: 10vh;
+  text-align: center;
+  padding-top: 1vh;
+  z-index: 10000;
+}
+
+.nav div.logo {
+  float: left;
+  width: auto;
+  height: auto;
+  padding-left: 3em;
+  margin-top: 1vh;
+}
+
+.nav div.logo a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.5em;
+}
+
+.nav div.logo a:hover {
+  color: #d8a8f7;
+}
+.navlinks {
+  justify-content: space-evenly;
+  gap: 3vw;
+}
+
+.nav div.main_list {
+  height: 11vh;
+  float: right;
+  padding-right: 4vh;
+  max-width: 50vw;
+}
+.container {
+  max-height: 0.001vh;
+}
+.nav div.main_list ul {
+  width: 100%;
+  height: 11vh;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav div.main_list ul li {
+  width: auto;
+  height: 10vh;
+  padding: 0;
+  padding-right: 3em;
+}
+
+.nav div.main_list ul li a {
+  text-decoration: none;
+  color: #000000;
+
+  font-size: 2.5em;
+}
+
+.nav div.main_list ul li a:hover {
+  color: #0300d1;
+  cursor: pointer;
+}
+
+/* Home section */
+
+#navbar-logo-image {
+  max-height: 7vh;
+  padding: 0.5vh;
+  max-width: 100%;
+}
+
+#navbar-name {
+  font-family: "Cabin Sketch", sans-serif;
+
+  font-size: 3vw;
+
+  color: #000000;
+}
+#Demo-navbar {
+  background-color: aliceblue;
+  color: #13072e;
+  border-radius: 10vw;
+  border: 2% white solid;
+  padding: 4%;
+  padding-left: 30%;
+  padding-right: 30%;
+  margin-left: -1vw;
+}
+#resources-button {
+  background-color: #13072e;
+  color: #d8a8f7;
+  border-radius: 10vw;
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 100%;
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1vw;
+  align-items: center;
+  justify-items: center;
+}
+
+#navbar-name {
+  font-family: "Cabin Sketch", sans-serif;
+
+  font-size: 4vh;
+
+  color: #e9e9e9;
+}
+
+/* Hide the resources box by default */
+.resources-box {
+  display: none;
+  position: absolute; /* Ensure it doesn't disrupt the layout */
+  background-color: transparent; /* Adjust background color as needed */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add some shadow for better visibility */
+  padding: 10px; /* Add some padding for better aesthetics */
+  border-radius: 5px; /* Optional: add rounded corners */
+  z-index: 100000; /* Ensure it's above other elements */
+  min-height: 10vh;
+  margin-top: -5vh;
+}
+
+.resources-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1vh;
+  margin-top: 1vh;
+
+  min-height: 30vh;
+}
+
+/* Show the resources box when hovering over the resources link */
+.resources:hover .resources-box {
+  display: block;
+}
+
+.resources-link a {
+  all: unset;
+  line-height: 4vh;
+  font-size: 1em;
+}
+
+.navTrigger {
+  display: none;
+  color: #000;
+}
+
+.nav {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+/* Media qurey section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    margin: 0px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .nav div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 1em;
+    max-width: 70vw;
+  }
+  .navTrigger {
+    display: block;
+  }
+  .nav div.logo {
+    margin-left: 15px;
+  }
+  .navlinks {
+    padding-top: 10vh;
+    justify-content: flex-end;
+    gap: 0.04vw;
+  }
+
+  #Demo-navbar {
+    background-color: aliceblue;
+    color: #f7f7f7;
+    border-radius: 10vw;
+    padding: 1%;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  #navbar-logo-image {
+    max-height: 8vh;
+    padding: 0.5vh;
+  }
+
+  #navbar-name {
+    font-size: 4vh;
+  }
+  .nav div.main_list {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    padding-right: 0.1px;
+    max-width: 100vw;
+  }
+  .nav div.show_list {
+    height: auto;
+    display: none;
+  }
+  .nav div.main_list ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    height: 50vh;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    /*same background color of navbar*/
+    background-position: center top;
+  }
+  .nav div.main_list ul li {
+    width: 100%;
+    text-align: right;
+    padding-right: 10vw;
+  }
+  .nav div.main_list ul li a {
+    text-align: center;
+    width: 100%;
+    font-size: 3rem;
+  }
+
+  /* Hide the resources box by default */
+  .resources-box {
+    display: none;
+    position: absolute; /* Ensure it doesn't disrupt the layout */
+    top: 20vh;
+    left: 5vw;
+    background-color: transparent; /* Adjust background color as needed */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add some shadow for better visibility */
+    border-radius: 5px; /* Optional: add rounded corners */
+    z-index: 100000; /* Ensure it's above other elements */
+  }
+  .resources-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1vh;
+    min-height: 30vh;
+  }
+
+  /* Show the resources box when hovering over the resources link */
+  .resources:hover .resources-box {
+    display: block;
+  }
+  #resources-button {
+    background-color: #ffffff;
+    color: #13072e;
+    border-radius: 10vw;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  .resources-link {
+    font-size: 1vh;
+    max-height: 4vh;
+    line-height: 1.2vh;
+    max-height: 2vh;
+  }
+
+  .resources-link a {
+    font-size: 1vh;
+    line-height: 1.2vh;
+    max-height: 5vh;
+  }
+}
+
+/* Animation */
+/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
+
+.navTrigger {
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  margin: auto;
+  position: absolute;
+  right: 30px;
+  top: 0;
+  bottom: 0;
+}
+
+.navTrigger i {
+  background-color: #000000;
+  border-radius: 2px;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+}
+
+.navTrigger i:nth-child(1) {
+  -webkit-animation: outT 0.8s backwards;
+  animation: outT 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+  margin: 5px 0;
+  -webkit-animation: outM 0.8s backwards;
+  animation: outM 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+  -webkit-animation: outBtm 0.8s backwards;
+  animation: outBtm 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+  -webkit-animation: inT 0.8s forwards;
+  animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+  -webkit-animation: inM 0.8s forwards;
+  animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+  -webkit-animation: inBtm 0.8s forwards;
+  animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
+
+@keyframes inM {
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes outM {
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
+
+@keyframes outM {
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes inT {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@keyframes inT {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@-webkit-keyframes outT {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@keyframes outT {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@-webkit-keyframes inBtm {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+@keyframes inBtm {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+@-webkit-keyframes outBtm {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+@keyframes outBtm {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+.affix {
+  margin-top: 0;
+  background-color: #ffffff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom: 2px solid #000030;
+}
