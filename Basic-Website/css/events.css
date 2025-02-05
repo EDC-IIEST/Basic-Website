@@ -252,7 +252,7 @@ letter-spacing: 2px
 
 .event-div{
   width: 100vw;
-  height: 400px ;
+  height: 50vh;
   z-index: -5 ;
   background-color: white;
   margin-top: 40px ;
