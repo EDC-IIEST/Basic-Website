@@ -34,7 +34,7 @@ video {
 }
 
 .stretch {
-  height: 1400px;
+  height: 1700px;
   background: black;
   min-height: 100%;
   min-width: 100%;
@@ -82,7 +82,7 @@ video {
   video{
     margin-top: 280px ;
     height: 300px;
-    width: 900px;
+    width: 2000px;
   }
 
   .fast-scroll-section {

@@ -7,13 +7,14 @@
   font-family: "Open Sans", sans-serif;
 }
 
+/* Base styles (Mobile First) */
 main {
   position: relative;
   width: calc(min(90rem, 90%));
   margin: 0 auto;
   min-height: 100vh;
-  column-gap: 3rem;
-  padding-block: min(20vh, 3rem);
+  column-gap: 1.5rem;
+  padding: 2rem 1rem;
 }
 
 .bg {
@@ -92,10 +93,8 @@ main > div > a:hover {
 }
 
 .swiper {
-
   height: 75%;
   padding-top: 3.125rem;
-  
 }
 
 .swiper-pagination-bullet,
@@ -108,23 +107,25 @@ main > div > a:hover {
 }
 
 .swiper-slide {
-  width: 10rem;  /* Adjust this value */
-  height: 28.125rem;
+  /* Base: on mobile, use a percentage width for better touch handling */
+  width: 80%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: end;
-  align-items: self-start;
+  align-items: flex-start;
   border-radius: 10px;
+  margin: 0 auto;
 }
 
 .swiper-slide h2 {
   color: #fff;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.4;
   margin-bottom: 0.625rem;
-  padding: 0 0 0 1.563rem;
+  padding-left: 1rem;
   text-transform: uppercase;
 }
 
@@ -132,9 +133,9 @@ main > div > a:hover {
   color: #dadada;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  padding: 0 1.563rem;
+  padding: 0 1rem;
   line-height: 1.6;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
@@ -142,9 +143,9 @@ main > div > a:hover {
 }
 
 .swiper-slide a {
-  margin: 1.25rem 1.563rem 3.438rem 1.563rem;
-  padding: 0.438em 1.875rem;
-  font-size: 0.9rem;
+  margin: 1rem 1rem 2rem 1rem;
+  padding: 0.4em 1.5rem;
+  font-size: 0.85rem;
 }
 
 .swiper-slide a:hover {
@@ -164,62 +165,119 @@ main > div > a:hover {
 
 .swiper-slide--one {
   border-radius: 10px;
-  
-  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+  background: linear-gradient(
+      to top,
+      #0f2027,
+      #203a4300,
+      #2c536400
+    ),
     url("https://images.unsplash.com/photo-1628944682084-831f35256163?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80")
-      no-repeat 50% 50% / cover;
-  
+      no-repeat center/cover;
 }
 
 .swiper-slide--two {
   border-radius: 10px;
-  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+  background: linear-gradient(
+      to top,
+      #0f2027,
+      #203a4300,
+      #2c536400
+    ),
     url("https://images.unsplash.com/photo-1515309025403-4b0184873cef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80")
-      no-repeat 50% 50% / cover;
+      no-repeat center/cover;
 }
 
 .swiper-slide--three {
   border-radius: 10px;
-  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+  background: linear-gradient(
+      to top,
+      #0f2027,
+      #203a4300,
+      #2c536400
+    ),
     url("https://images.unsplash.com/photo-1545671913-b89ac1b4ac10?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
-      no-repeat 50% 50% / cover;
+      no-repeat center/cover;
 }
 
 .swiper-slide--four {
   border-radius: 10px;
-  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+  background: linear-gradient(
+      to top,
+      #0f2027,
+      #203a4300,
+      #2c536400
+    ),
     url("https://images.unsplash.com/photo-1598977123118-4e30ba3c4f5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
-      no-repeat 50% 50% / cover;
+      no-repeat center/cover;
 }
 
 .swiper-slide--five {
   border-radius: 10px;
-  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+  background: linear-gradient(
+      to top,
+      #0f2027,
+      #203a4300,
+      #2c536400
+    ),
     url("https://images.unsplash.com/photo-1570481662006-a3a1374699e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80")
-      no-repeat 50% 50% / cover;
+      no-repeat center/cover;
 }
-
-
 
 .swiper-3d .swiper-slide-shadow-left,
 .swiper-3d .swiper-slide-shadow-right {
   background-image: none;
 }
 
+/* -------------------------------
+   Media Queries for Responsiveness
+-----------------------------------*/
+
+/* Medium devices and up (min-width: 48rem / 768px) */
 @media screen and (min-width: 48rem) {
   main {
     display: flex;
     align-items: center;
+    padding: min(20vh, 3rem);
+    column-gap: 3rem;
   }
+  
+  /* Reveal subtle background elements on larger screens */
   .bg,
   .bg2 {
     opacity: 0.1;
   }
+  
+  /* Adjust swiper-slide sizing */
+  .swiper-slide {
+    width: 10rem;
+    height: 28.125rem;
+  }
+  
+  .swiper-slide h2 {
+    font-size: 1.4rem;
+    padding-left: 1.563rem;
+  }
+  
+  .swiper-slide p {
+    font-size: 0.75rem;
+    padding: 0 1.563rem;
+  }
+  
+  .swiper-slide a {
+    margin: 1.25rem 1.563rem 3.438rem 1.563rem;
+    padding: 0.438em 1.875rem;
+    font-size: 0.9rem;
+  }
 }
 
+/* Extra large devices (min-width: 93.75rem / ~1500px) */
 @media screen and (min-width: 93.75rem) {
   .swiper {
     width: 85%;
   }
+  
+  main > div h1 {
+    /* Increase the heading size slightly on very large screens */
+    font-size: clamp(3.5rem, 3.5rem + 0.5vw, 4.5rem);
+  }
 }
-

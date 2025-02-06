@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
@@ -16,8 +17,8 @@
   <link rel="stylesheet" href="css/animatedtext.css">
   <link rel="stylesheet" href="css/parallex.css">
 
-
-  <script src="https://kit.fontawesome.com/9f1d966d1d.js" crossorigin="anonymous"></script>
+  
+  
   <link rel="stylesheet" href="css/indexAnimation.css">
 
   
@@ -26,6 +27,7 @@
 </head>
 
 <style>
+  
   
   .flex-center {
   display: flex;
@@ -49,7 +51,88 @@
   width: 100%;
 }
  
+html, body {
+    margin: 0;
+    color: #fff;
+    font-family: Arial;
+}
 
+.text-container {
+    background: #000;
+    width: 100vw;
+    height: 100vh;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 40px;
+}
+
+.text-container > .quote {
+    animation: come2life linear 10s infinite;
+    transform-origin: center center;
+    opacity: 0;
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.text-container > .quote:nth-child(1) {
+    left: 30vw;
+    top: 30vh;
+    animation-delay: 0s;
+}
+
+.text-container > .quote:nth-child(2) {
+    left: 70vw;
+    top: 30vh;
+    animation-delay: 4s;
+}
+
+.text-container > .quote:nth-child(3) {
+    left: 50vw;
+    top: 50vh;
+    animation-delay: 8s;
+}
+
+.text-container > .quote:nth-child(4) {
+    left: 30vw;
+    top: 70vh;
+    animation-delay: 6s;
+}
+
+.text-container > .quote:nth-child(5) {
+    left: 70vw;
+    top: 70vh;
+    animation-delay: 2s;
+}
+
+@keyframes come2life {
+    0% {
+        transform: scale3d(0,0,1) rotate(0.02deg);
+        opacity: 0;
+        filter: blur(10px);
+    }
+    25% {
+        transform: scale3d(1,1,1) rotate(0.02deg);
+        opacity: 0.6;
+        filter: blur(0px);
+    }
+    40% {
+        opacity: 0.6;
+        filter: blur(0px);
+    }
+
+    80% {
+      opacity: 0;
+    }
+  
+    100% {
+        transform: scale3d(4,4,1) rotate(0.02deg);
+        filter: blur(10px);
+    }
+}
 
 
 </style>
@@ -85,14 +168,27 @@
         </span>
 
 </nav>
+
+<div class="text-container">
+  <div class="quote">Hello, This is block of a text</div>
+  <div class="quote">Hello, This is another block of text</div>
+  <div class="quote">Hello, This is yet another block of text</div>
+  <div class="quote">Hello, This is also a block of text</div>
+  <div class="quote">Hello, This is the last block of text</div>
+
+  <div class="wrapper four">
+    
+ 
+    <div class="type">
       
-<div class="wrapper four">
-  <div class="type">
-      <h3 class="typing">EDC IIEST SHIBPUR</h3>
+        <h3 class="typing" style="font-size: 5rem;" >EDC IIEST SHIBPUR</h3>
+    </div>
+  </div>
+  
   </div>
 </div>
+      
 
-</div>
 
 
 <div class="hero-wrapper fast-scroll-section">
@@ -170,8 +266,8 @@
 
 </div>
 
-
-
+  <!-- Site footer -->
+  
 
 
 
@@ -187,7 +283,12 @@ window.addEventListener('scroll', () => {
 });
 </script>
 
+<script src="https://kit.fontawesome.com/9f1d966d1d.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
 <script src="/Basic-Website/js/counter.js"></script>
 
 </body>
+
 </html>
