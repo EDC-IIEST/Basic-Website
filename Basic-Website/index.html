@@ -1,333 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 
-  <!-- poppins font -->
-  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/homeNav.css">
   <link rel="stylesheet" href="css/hero.css">
   <link rel="stylesheet" href="css/infopage.css">
   <link rel="stylesheet" href="css/getstarted.css">
+  <link rel="stylesheet" href="css/animatedtext.css">
+  <link rel="stylesheet" href="css/parallex.css">
+
 
   <script src="https://kit.fontawesome.com/9f1d966d1d.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/indexAnimation.css">
 
+  
+  
 
 </head>
 
-<body>
+<style>
+  
+  .flex-center {
+  display: flex;
+ 
+  align-items: center;
+}
 
+.slide-bg {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  z-index: -999;
+  height: 700px;
+
+}
+
+.slide-bg > video,
+.slide-bg > img {
+  width: 100%;
+}
+ 
+
+
+
+</style>
+
+<body >
+<div class="Text_Nav">
   <nav class="nav">
     <div class="container">
-      <div class="logo">
-        <img id="navbar-logo-image" src="video_and_images/logo.png" alt="logo">
-
-      </div>
-      <div id="mainListDiv" class="main_list">
-        <ul class="navlinks">
-          <li><a href="/">Home</a></li>
-          <li><a href="/events.html">Events</a></li>
-          <li><a href="/team.html">Team</a></li>
-
-          <li><a href="/gallary.html">Gallery</a></li>
-
-
-          <li><a href="/contact.html">Contact us</a></li>
-
-          <!-- <li><a href="/blog">Explore</a></li> -->
-
-        </ul>
-      </div>
-    </div>
-    <span class="navTrigger">
-      <i></i>
-      <i></i>
-      <i></i>
-    </span>
-
-  </nav>
-  <section class="hero">
-    <video src="video_and_images/video.mp4" autoplay muted playsinline loop="false"></video>
-    <!-- <button class="button-10" role="button">Button 10</button> -->
-
-
-
-  </section>
-
-
-
-  <div class="infopage">
-    <div class="outerbox">
-
-      <div class="infobox">
-
-        <div class="infobox-right">
-
-          <div class="info-rightbox-subheading">
-            <h2> EDC IIEST Shibpur</h2>
-            <div class="styledDiv"></div>
-
-
-          </div>
-
-          <div class="info-rightbox-text">
-            Welcome to EDCell
-            Entrepreneurship Development Cell was set up in the year 2009 under the AICTE initiative and is working
-            under the guidance of the Department of Human Resources Management in co-ordination with NRDC-IIEST IFC,
-            TCGTBI and now with IIC IIESTS.
-            We enable smooth and efficient interaction between its principal components spanning students, faculty,
-            working professionals, aspiring and existing entrepreneurs, mentors, angel investors, and venture
-            capitalists. We're connected with other agencies of our institute involved in entrepreneurship and
-            innovation like Institution's Innovation Council (IIC), Tagore Centre for Green Technology Business
-            Incubation, NRDC IIEST Innovation Facilitation Centre (IFC), IPR Cell, etc....
-            We share the common belief that for India to emerge as a world power, the youth has to break the shackles of
-            prejudices and inertia that has kept them from starting up. Creating an entrepreneurial ecosystem to provide
-            the platform for individuals with creative minds and ideas with potential for substantial business
-            opportunities, is what we strive towards continually
-          </div>
-          <div>
-            <a class="info-rightbox-button" href="https://www.iiests.ac.in/IIEST/EDC" target="_blank">MORE&#x2192;</a>
-
-          </div>
+        <div class="logo">
+            <img id="navbar-logo-image" src="video_and_images/logo.png" alt="logo">
 
         </div>
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="/events.html">Events</a></li>
+                <li><a href="/team.html">Team</a></li>
 
-        <div class="infobox-left">
+                <li><a href="/gallary.html">Gallery</a></li>
 
-          <div class="infovideo">
-            <img class="lazy-load" data-src="video_and_images/main.png" alt="">
+               
+                <li><a href="/contact.html">Contact us</a></li>
 
+                <!-- <li><a href="/blog">Explore</a></li> -->
 
-          </div>
-          <div class="infovideo-subheading">
-            <!-- <h2>Meet the Founders</h2> -->
-
-          </div>
-
+            </ul>
         </div>
-      </div>
     </div>
+        <span class="navTrigger">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
 
-
+</nav>
+      
+<div class="wrapper four">
+  <div class="type">
+      <h3 class="typing">EDC IIEST SHIBPUR</h3>
   </div>
+</div>
+
+</div>
 
 
-  <div class="stats animateImg">
+<div class="hero-wrapper fast-scroll-section">
+  
+    <figure>
+      <video loop muted autoplay>
+        <source src="../Basic-Website/video_and_images/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+   
+    </figure>
+ 
+</div>
 
-    <img class="lazy-load" data-src="video_and_images/stats.png" alt="">
-  </div>
+<div class="stretch">
+  
+ 
+
+      <div class="info">
+
+         <div class="minInfo">
+          Welcome to EDCell
+          Entrepreneurship Development Cell was set up in the year 2009 under the AICTE initiative and is working
+          under the guidance of the Department of Human Resources Management in co-ordination with NRDC-IIEST IFC,
+          TCGTBI and now with IIC IIESTS.
+          We enable smooth and efficient interaction between its principal components spanning students, faculty,
+          working professionals, aspiring and existing entrepreneurs, mentors, angel investors, and venture
+          capitalists. We're connected with other agencies of our institute involved in entrepreneurship and
+          innovation like Institution's Innovation Council (IIC), Tagore Centre for Green Technology Business
+          Incubation, NRDC IIEST Innovation Facilitation Centre (IFC), IPR Cell, etc....
+          We share the common belief that for India to emerge as a world power, the youth has to break the shackles of
+          prejudices and inertia that has kept them from starting up. Creating an entrepreneurial ecosystem to provide
+          the platform for individuals with creative minds and ideas with potential for substantial business
+          opportunities, is what we strive towards continually
+         </div>
+
+         <img src="/Basic-Website/video_and_images/main.png" width="450px" class="mainImage">
+           
+      </div>
 
 
-  <div class="white">
+        <div class="countDiv">
 
-    <div class="white-container">
-      <div class="white-box-left">
-        <div class="header-box animateImg">
-          JOIN OUR COMMUNITY
-        </div>
-        <div class="social-box">
+        <div class="sub-countDiv" >
+        <div class="counter" id="counter">0</div>
+        <h3 style="color: white ; font-size: 1.7rem;">Social Reach</h3>
+      </div>
 
-          <a href="mailto:edc.iiests@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-          <a href="https://www.instagram.com/edc.iiests/profilecard/?igsh=MTBpd2dkNDFwbXFybg==" target="_blank"><i
-              class="fa-brands fa-square-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/edciiests/" target="_blank"><i
-              class="fa-brands fa-linkedin"></i></a>
-          <a href="" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
-          <a href="" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
-          <a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-          <a href="" target="_blank"><i class="fa-brands fa-square-github"></i></a>
-          <a href="" target="_blank"><i class="fa-brands fa-medium"></i></a>
+        <div class="sub-countDiv">
+        <div class="counter" id="counter">10+</div>
+        <h3 style="color: white ; font-size: 1.7rem;">Startups</h3>
+      </div>
 
 
+      </div>
+        
+      <div class="btn-Div">
 
-        </div>
+  <button class="animated-button">
+  <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+    ></path>
+  </svg>
+  <span class="text">Join Our Community</span>
+  <span class="circle"></span>
+  <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+    ></path>
+  </svg>
+</button>
 
       </div>
 
-      <div class="white-box-right">
-
-        <div>
-          <img data-src="video_and_images/network.png" alt="" class="lazy-load network">
-
-        </div>
-      </div>
+</div>
 
 
-    </div>
-
-    <footer class="footer">
-      <div class="footer__addr">
-        <img src="video_and_images/logo.png" alt="">
 
 
-        <h2>Address</h2>
-
-        <address>
-          IIEST, shibpur<br>
-          Howrah, West Bengal, 711103
-        </address>
-      </div>
-
-      <ul class="footer__nav">
-        <li class="nav__item">
-          <h2 class="nav__title">Company</h2>
-
-          <ul class="nav__ul">
-            <li>
-              <a href="/">Home</a>
-            </li>
-
-            <li>
-              <a href="/Basic-Website/events.html">Events</a>
-            </li>
-
-            <li>
-              <a href="/Basic-Website/">Team</a>
-            </li>
-
-            <li>
-              <a href="gallary.html">Gallery</a>
-            </li>
-
-          </ul>
-        </li>
-
-        <li class="nav__item ">
-          <h2 class="nav__title">Legal</h2>
-
-          <ul class="nav__ul">
-            <li>
-              <a href="mailto:iiests.edc@gmail.com">Help</a>
-            </li>
-
-            <li>
-              <a href="mailto:iiests.edc@gmail.com">Contact</a>
-            </li>
-
-            <li>
-              <a href="mailto:iiests.edc@gmail.com">Partnership</a>
-            </li>
-
-            <li>
-              <a href="mailto:iiests.edc@gmail.com">Privacy Policy</a>
-            </li>
 
 
-          </ul>
-        </li>
+<script>
+  const parallaxElements = document.querySelectorAll('[data-parallax]');
 
-        <li class="nav__item">
-          <h2 class="nav__title">Socials</h2>
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  parallaxElements.forEach((el) => {
+    const top = el.offsetTop;
+    el.style.transform = `translateY(-${ (y > top) ? y / 5 : 0 }px)`;
+  });
+});
+</script>
 
-          <ul class="nav__ul">
-            <li>
-              <a href="https://www.linkedin.com/company/edciiests/">LinkedIn</a>
-            </li>
-
-            <li>
-              <a href="" target="_blank">Facebook</a>
-
-            </li>
-
-            <li>
-
-              <a href="https://www.instagram.com/edc.iiests/profilecard/?igsh=MTBpd2dkNDFwbXFybg=="
-                target="_blank">Instagram</a>
-            </li>
-            <li>
-              <a href="" target="_blank">YouTube</a>
-            </li>
-            <li>
-              <a href="" target="_blank">Medium</a>
-            </li>
-            <li>
-              <a href="" target="_blank">Twitter</a>
-
-            </li>
-            <li>
-              <a href="" target="_blank">GitHub</a>
-            </li>
-
-          </ul>
-        </li>
-      </ul>
-
-      <div class="legal">
-        <p>Copyright EDC IIEST. All rights reserved 2024</p>
-
-        <div class="legal__links">
-          <span>Designed with expertise by <a href="https://www.linkedin.com/in/harshrjn/"
-              style="color: #242424; font-size: 12px;">Harsh Ranjan.</a></span>
-        </div>
-      </div>
-    </footer>
-
-    <script>
-      const edcDiv = document.getElementsByClassName("styledDiv")[0]
-      const animateImg = document.getElementsByClassName("animateImg")
-
-      window.addEventListener("scroll", () => {
-        const edc = edcDiv.getBoundingClientRect()
-        Array.from(animateImg).forEach(img => {
-          const imgRec = img.getBoundingClientRect()
-          if (imgRec.top < window.innerHeight / 1.5 && imgRec.bottom > 0) {
-            img.classList.add("visible-stats")
-          }
-          else {
-            img.classList.remove("visible-stats")
-          }
-
-        });
-
-        if (edc.top < window.innerHeight && edc.bottom > 0) {
-          edcDiv.classList.add("styledDivAnimation")
-        }
-        else {
-          edcDiv.classList.remove("styledDivAnimation")
-        }
-      })
-    </script>
-
-    <script data-src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script data-src="js/nav.js"></script>
-
-    <!-- lazy loading -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const lazyImages = document.querySelectorAll('img.lazy-load');
-
-        if ('IntersectionObserver' in window) {
-          let imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.classList.remove('lazy-load');
-                imageObserver.unobserve(img);
-              }
-            });
-          });
-
-          lazyImages.forEach(img => {
-            imageObserver.observe(img);
-          });
-        } else {
-          // Fallback for older browsers
-          lazyImages.forEach(img => {
-            img.src = img.dataset.src;
-            img.classList.remove('lazy-load');
-          });
-        }
-      });
-
-    </script>
+<script src="/Basic-Website/js/counter.js"></script>
 
 </body>
-
 </html>

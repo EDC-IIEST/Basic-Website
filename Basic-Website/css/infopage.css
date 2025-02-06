@@ -1,331 +1,231 @@
+/* Base Styles */
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
 
-:root {
-    --background-color: #070212;
-    --circle-color-start: #6c10b8;
-    --circle-color-end: #2d0e63;
+.minInfo {
+  max-width: 700px;
+  margin-left: 70px;
+  text-align: left;
+  line-height: 30px;
+  font-family: "Ubuntu", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.mainImage {
+  margin-right: 140px;
+}
+
+/* Count Div Layout */
+.countDiv {
+  display: flex;
+  padding-right: 250px;
+  justify-content: space-between;
+  margin-left: 200px;
+  margin-top: 200px;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  font-size: 5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.sub-countDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Animated Button Styles */
+.animated-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 36px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: greenyellow;
+  box-shadow: 0 0 0 2px greenyellow;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button svg {
+  position: absolute;
+  width: 24px;
+  fill: greenyellow;
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+  right: 16px;
+}
+
+.animated-button .arr-2 {
+  left: -25%;
+}
+
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: greenyellow;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+  position: relative;
+  font-size: 1.7rem;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #212121;
+  border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+  fill: #212121;
+}
+
+.animated-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 0 4px greenyellow;
+}
+
+.animated-button:hover .circle {
+  width: 420px;
+  height: 220px;
+  opacity: 1;
+}
+
+.btn-Div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 180px;
+}
+
+/* -------------------------------- */
+/* Responsive Media Queries */
+/* -------------------------------- */
+
+/* For Very Large Screens (1440px and up) */
+@media screen and (min-width: 1440px) {
+  .minInfo {
+    margin-left: 100px;
+    font-size: 22px;
   }
-
-  .stats{
-    width: 100%;
-    overflow: hidden;
+  .mainImage {
+    margin-right: 200px;
   }
+  .countDiv {
+    margin-left: 250px;
+    margin-top: 250px;
+    padding-right: 300px;
+  }
+  .counter {
+    font-size: 6rem;
+  }
+}
 
+/* For Tablets and Small Laptops */
+@media screen and (max-width: 1024px) {
+  .minInfo {
+    margin-left: 30px;
+    font-size: 18px;
+  }
+  .mainImage {
+    margin-right: 30px;
+  }
+  .countDiv {
+    margin-left: 30px;
+    margin-top: 100px;
+    padding-right: 30px;
+  }
+  .counter {
+    font-size: 4rem;
+  }
+}
 
-
-
-  .outerbox {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    min-height: 40vh;
-    max-height: 90vh;
-    width: 90vw;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
+/* For Mobile Devices */
+@media screen and (max-width: 768px) {
+  .info {
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    position: relative;
-    overflow: hidden;
-    
-}
-
-.outerbox::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: transparent;
-    /* background: radial-gradient(
-            circle,
-            var(--circle-color-start),
-            var(--circle-color-end) 20%,
-            rgba(12, 2, 34, 0.226) 0%
-        ),
-        radial-gradient(
-            circle at 40% 94%,
-            var(--circle-color-start),
-            var(--circle-color-end) 20%,
-            rgba(19, 7, 46, 0) 0%
-        ),
-        radial-gradient(
-            circle at 60% 20%,
-            var(--circle-color-start),
-            var(--circle-color-end) 10%,
-            rgba(19, 7, 46, 0) 0%
-        ),
-        radial-gradient(
-            circle at 80% 50%,
-            var(--circle-color-start),
-            var(--circle-color-end) 10%,
-            rgba(19, 7, 46, 0) 0%
-        ),
-        radial-gradient(
-            circle at 90% 50%,
-            var(--circle-color-start),
-            var(--circle-color-end) 2%,
-            rgba(19, 7, 46, 0.123) 0%
-        ),
-        radial-gradient(
-            circle at 20% 40%,
-            var(--circle-color-start),
-            var(--circle-color-end) 15%,
-            rgba(19, 7, 46, 0) 0%
-        ),
-        radial-gradient(
-            circle at 30% 90%,
-            var(--circle-color-start),
-            var(--circle-color-end) 15%,
-            rgba(19, 7, 46, 0) 0%
-        ),
-        radial-gradient(
-            circle at 90% 70%,
-            var(--circle-color-start),
-            var(--circle-color-end) 20%,
-            rgba(19, 7, 46, 0) 0%
-        ),
-        radial-gradient(
-            circle at 75% 40%,
-            var(--circle-color-start),
-            var(--circle-color-end) 15%,
-            rgba(19, 7, 46, 0) 0%
-        ); */
-        
-    filter: blur(10px);
-    
-    z-index: -1;
-    animation: moveCircles 1s infinite alternate;
-    
-}
-
-
-.outerbox::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: transparent;
-
-   
-    pointer-events: none;
-    z-index: -1;
+    text-align: center;
   }
-
-
-
-
-@keyframes moveCircles {
-    0% {
-        background-position: 0% 0%, 4% 4%, 60% 20%, 80% 10%, 70% 50%, 20% 40%, 30% 70%, 90% 50%, 65% 40%, 100% 20%;
-    }
-    20% {
-        background-position: 10% 10%, 8% 8%, 65% 25%, 85% 15%, 75% 55%, 25% 45%, 35% 75%, 95% 55%, 70% 45%, 105% 25%;
-    }
-    40% {
-        background-position: 20% 20%, 12% 12%, 70% 30%, 90% 20%, 80% 60%, 30% 50%, 40% 80%, 100% 60%, 75% 50%, 110% 30%;
-    }
-    60% {
-        background-position: 30% 30%, 16% 16%, 75% 35%, 95% 25%, 85% 65%, 35% 55%, 45% 85%, 105% 65%, 80% 55%, 115% 35%;
-    }
-    80% {
-        background-position: 40% 40%, 20% 20%, 80% 40%, 100% 30%, 90% 70%, 40% 60%, 50% 90%, 110% 70%, 85% 60%, 120% 40%;
-    }
-    100% {
-        background-position: 50% 50%, 24% 24%, 85% 45%, 105% 35%, 95% 75%, 45% 65%, 55% 95%, 115% 75%, 90% 65%, 125% 45%;
-    }
-}
-  
-
-.infoheading{
-    width:100%;
-margin-left: 2vw;
-margin-top: 2vw;
-font-size: 5vh;
-color:whitesmoke;
-font-family: "Be Vietnam Pro", sans-serif;
-font-weight: 500;
-font-style: normal;
-} 
-
-
-.infobox{
-    display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-
-}
-
-.infobox-left{
-    max-width: 50%;
-    margin-top: 10vh;
-    display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-}
-
-.infovideo-subheading{
-    font-size: 1.5vh;
-    line-height: 2vh;
-    color: whitesmoke;
-
-}
-
-
-
-
-
-.infobox-right{
-    max-width: 50%;
-    padding:2vw 2vw 2vw 2vw;
-    display: flex;
+  .minInfo {
+    margin: 20px auto;
+    text-align: center;
+  }
+  .mainImage {
+    margin: 20px auto;
+  }
+  .countDiv {
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    overflow: hidden;
-
-}  
-.info-rightbox-subheading{
-    margin-left: 2vw;
-    font-size: 5vh;
-    color:#000055;
-    font-family: "Be Vietnam Pro", sans-serif;
-    font-weight: 1000;
-} 
-.info-rightbox-text{
-    text-align: justify;
-    text-align: justify;
-    font-size: 2vh;
-    line-height: 1.6;
-    color: #000000;
-    font-weight: 500;
-margin-left: 2vw;
-margin-right: 2vw;
-margin-top: 3vh;
-margin-bottom: 4vh;
-
+    align-items: center;
+    margin-left: 0;
+    margin-top: 50px;
+    padding-right: 0;
+  }
+  .counter {
+    font-size: 3rem;
+  }
+  .btn-Div {
+    margin-top: 100px;
+  }
+  .animated-button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
 }
 
-
-
-.info-rightbox-button{
-    text-decoration: none;
-background-color: #94dd00;
-color: #000055;
-border-radius: 10vw;
-border: 2% white solid;
-font-size: 2vh;
-margin-bottom: 3vh;
-
-padding: 4%;
-display: inline-block;
-padding-left: 20%;
-padding-right: 20%;
-text-align: center; /* Centers the text within the a tag */
-white-space: nowrap;
-margin-left: 2vw;
-
-
-
+/* For Very Small Devices */
+@media screen and (max-width: 480px) {
+  .minInfo {
+    font-size: 16px;
+    margin: 10px;
+  }
+  .mainImage {
+    width: 90%;
+    margin: 10px auto;
+  }
+  .animated-button {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
 }
-.infovideo {
-display: flex;
-justify-content: center;
-align-items: center;
-margin: 5%;
-}
-
-.infovideo img {
-max-width: 80%;
-border-radius: 1vw
-}
-
-
-
-
-
-@media screen and (max-width:980px){
-    .info-rightbox-text{
-font-size: 16px;
-font-weight: 400;
-color:#000000;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-font-style: verdana;
-margin-left: 2vw;
-margin-top: 1vh;
-margin-bottom: 3vh;
-}
-.outerbox{
-max-height: none;
-}
-
-.infobox{
-    display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-
-}
-.infobox-right{
-    max-width: 100%;
-}
-.infobox-left{
-    max-width: 100%;
-    margin-top: 10px;
-}
-.info-rightbox-subheading{
-    font-size: 48px;
-}
-.infoheading{
-    width:100%;
-margin-left: 2vw;
-margin-top: 2vw;
-text-align: center;
-font-size: 4vh;
-color:rgb(0, 0, 0);
-font-family: "Be Vietnam Pro", sans-serif;
-font-weight: 500;
-font-style: normal;
-}
-
-.infovideo {
-display: flex;
-justify-content: center;
-align-items: center;
-margin: 5%;
-}
-
-.infovideo video {
-max-width: 100%;
-border-radius: 2vw;
-
-}
-
-
-    
-}
-
-@media screen and (min-width:2080px)
-{
-
-
-    .info-rightbox-text{
-    text-align: justify;
-    font-size: 2vh;
-    line-height: 2.5vh;
-    letter-spacing: normal;
-font-weight: 100;
-color:#000000;
-margin-left: 2vw;
-margin-right: 2vw;
-margin-top: 3vh;
-margin-bottom: 4vh;
-
-}
-}
-

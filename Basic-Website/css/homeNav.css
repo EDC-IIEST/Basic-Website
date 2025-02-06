@@ -1,0 +1,465 @@
+/* ================================
+   Global Base Styles (Desktop by default)
+   ================================ */
+
+   @import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700");
+
+   @font-face {
+     font-family: Montserrat;
+     src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+   }
+   
+   @font-face {
+     font-family: Poppins;
+     src: url(../fonts/Poppins/Poppins-Medium.ttf);
+   }
+   
+   @font-face {
+     font-family: Nunito;
+     src: url(../fonts/Nunito/Nunito-VariableFont_wght.ttf);
+   }
+   
+   /* ---- Hovering Effect -------- */
+   #mainListDiv > ul > li > a {
+     position: relative;
+   }
+   
+   #mainListDiv > ul > li > a:hover {
+     text-decoration: none !important;
+     color: inherit !important;
+   }
+   
+   #mainListDiv > ul > li > a::before {
+     content: "";
+     position: absolute;
+     bottom: -1px;
+     left: 0;
+     height: 2px;
+     width: 100%;
+     transform: scaleX(0);
+     transform-origin: right;
+     transition: transform 0.3s ease-in-out;
+     background-color: rgb(165, 223, 21);
+   }
+   
+   #mainListDiv > ul > li > a:hover::before {
+     transform: scaleX(1);
+     transform-origin: left;
+     transition: transform 0.3s ease-in-out;
+   }
+   
+   /* -------------------------------
+      Navbar & Home Section Styles
+      ------------------------------- */
+   .nav {
+     width: 80%;
+     height: 10vh;
+     margin-top: 60px;
+     position: absolute;
+     top: 0;
+     line-height: 10vh;
+     text-align: center;
+     z-index: 10000;
+     background-color: white;
+     border-radius: 35px;
+     -webkit-transition: all 0.4s ease;
+     transition: all 0.4s ease;
+   }
+   
+   .nav div.logo {
+     float: left;
+     width: auto;
+     height: auto;
+     padding-left: 3em;
+     margin-top: 1vh;
+   }
+   
+   .nav div.logo a {
+     text-decoration: none;
+     color: #000000;
+   }
+   
+   .nav div.logo a:hover {
+     color: #d8a8f7;
+   }
+   
+   .navlinks {
+     justify-content: space-evenly;
+     gap: 3vw;
+   }
+   
+   .navlinks li a {
+     font-family: "Poppins";
+     font-weight: 400;
+     font-style: normal;
+     font-size: 30px;
+   }
+   
+   .nav div.main_list {
+     height: 11vh;
+     float: right;
+     padding-right: 4vh;
+     max-width: 50vw;
+   }
+   
+   .container {
+     max-height: 0.001vh;
+   }
+   
+   .nav div.main_list ul {
+     width: 100%;
+     height: 11vh;
+     display: flex;
+     list-style: none;
+     margin: 0;
+     padding: 0;
+   }
+   
+   .nav div.main_list ul li {
+     width: auto;
+     height: 10vh;
+     padding: 0;
+     padding-right: 3em;
+   }
+   
+   .nav div.main_list ul li a {
+     text-decoration: none;
+     color: #000000;
+     font-size: 1.3em;
+   }
+   
+   .nav div.main_list ul li a:hover {
+     color: #0300d1;
+     cursor: pointer;
+   }
+   
+   /* Home Section */
+   #navbar-logo-image {
+     max-height: 7vh;
+     padding: 0.5vh;
+     max-width: 100%;
+   }
+   
+   #navbar-name {
+     /* Note: the second definition overwrites the first */
+     font-family: "Montserrat", serif;
+     font-optical-sizing: auto;
+     font-style: normal;
+     font-size: 4vh;
+     color: #e9e9e9;
+   }
+   
+   #Demo-navbar {
+     background-color: aliceblue;
+     color: #13072e;
+     border-radius: 10vw;
+     border: 2% white solid;
+     padding: 4%;
+     padding-left: 30%;
+     padding-right: 30%;
+     margin-left: -1vw;
+   }
+   
+   #resources-button {
+     background-color: #13072e;
+     color: #d8a8f7;
+     border-radius: 10vw;
+     padding-left: 10%;
+     padding-right: 10%;
+     width: 100%;
+   }
+   
+   .logo {
+     display: flex;
+     flex-direction: row;
+     column-gap: 1vw;
+     align-items: center;
+     justify-items: center;
+   }
+   
+   /* Resources Box */
+   .resources-box {
+     display: none;
+     position: absolute;
+     background-color: transparent;
+     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+     padding: 10px;
+     border-radius: 5px;
+     z-index: 100000;
+     min-height: 10vh;
+     margin-top: -5vh;
+   }
+   
+   .resources-link {
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: center;
+     gap: 1vh;
+     margin-top: 1vh;
+     min-height: 30vh;
+   }
+   
+   .resources:hover .resources-box {
+     display: block;
+   }
+   
+   .resources-link a {
+     all: unset;
+     line-height: 4vh;
+     font-size: 1em;
+   }
+   
+   .nav div.main_list ul li {
+  
+    font-size: 0.5rem;
+  }
+   /* Hamburger (Nav Trigger) */
+   .navTrigger {
+     display: none;
+     color: #000;
+     cursor: pointer;
+     width: 30px;
+     height: 25px;
+     margin: auto;
+     position: absolute;
+     right: 30px;
+     top: 0;
+     bottom: 0;
+   }
+   
+   .navTrigger i {
+     background-color: #000000;
+     border-radius: 2px;
+     display: block;
+     width: 100%;
+     height: 4px;
+   }
+   
+   /* Hamburger Animations */
+   .navTrigger i:nth-child(1) {
+     -webkit-animation: outT 0.8s backwards;
+     animation: outT 0.8s backwards;
+     -webkit-animation-direction: reverse;
+     animation-direction: reverse;
+   }
+   .navTrigger i:nth-child(2) {
+     margin: 5px 0;
+     -webkit-animation: outM 0.8s backwards;
+     animation: outM 0.8s backwards;
+     -webkit-animation-direction: reverse;
+     animation-direction: reverse;
+   }
+   .navTrigger i:nth-child(3) {
+     -webkit-animation: outBtm 0.8s backwards;
+     animation: outBtm 0.8s backwards;
+     -webkit-animation-direction: reverse;
+     animation-direction: reverse;
+   }
+   
+   .navTrigger.active i:nth-child(1) {
+     -webkit-animation: inT 0.8s forwards;
+     animation: inT 0.8s forwards;
+   }
+   .navTrigger.active i:nth-child(2) {
+     -webkit-animation: inM 0.8s forwards;
+     animation: inM 0.8s forwards;
+   }
+   .navTrigger.active i:nth-child(3) {
+     -webkit-animation: inBtm 0.8s forwards;
+     animation: inBtm 0.8s forwards;
+   }
+   
+   /* (Keyframes omitted for brevity; they remain as in your original code) */
+   
+   /* Affix Style */
+   .affix {
+     margin-top: 0;
+     background-color: #ccccff;
+     border-bottom-left-radius: 15px;
+     border-bottom-right-radius: 15px;
+     border-bottom: 2px solid #000030;
+   }
+   
+   /* ================================
+      Responsive Media Queries
+      ================================ */
+   
+   /* --- Mobile Devices (max-width: 600px) --- */
+   @media only screen and (max-width: 600px) {
+     .nav {
+       width: 95%;
+       height: 8vh;
+       margin-top: 20px;
+       border-radius: 20px;
+       padding: 0 5px;
+     }
+   
+     .nav div.logo {
+       padding-left: 1em;
+       margin-top: 0;
+     }
+   
+     #navbar-logo-image {
+       max-height: 5vh;
+     }
+   
+     #navbar-name {
+       font-size: 3vh;
+     }
+   
+     /* Adjust Demo-navbar & Resources Button */
+     #Demo-navbar {
+       padding-left: 5%;
+       padding-right: 5%;
+       font-size: 1rem;
+     }
+     #resources-button {
+       padding-left: 5%;
+       padding-right: 5%;
+       padding-top: 5%;
+       padding-bottom: 5%;
+     }
+   
+     /* Hide horizontal nav list; stack items vertically */
+     .nav div.main_list {
+       width: 100%;
+       height: 0;
+       overflow: hidden;
+     }
+     .nav div.main_list ul {
+       flex-direction: column;
+       width: 100%;
+       background-color: #bdddfc;
+       padding-top: 10px;
+     }
+     .nav div.main_list ul li {
+       width: 100%;
+       text-align: center;
+       padding: 10px 0;
+       padding-right: 0;
+       font-size: 1rem;
+     }
+   
+     /* Optionally display the nav trigger (hamburger) */
+     .navTrigger {
+       display: block;
+     }
+   
+     /* Resources box adjustments */
+     .resources-box {
+       top: 20vh;
+       left: 5vw;
+     }
+     .resources-link a {
+       font-size: 0.9rem;
+     }
+   }
+   
+   /* --- Tablets (min-width: 601px and max-width: 1024px) --- */
+   @media screen and (min-width: 601px) and (max-width: 1024px) {
+     .nav {
+       width: 90%;
+       height: 10vh;
+       margin-top: 30px;
+       border-radius: 25px;
+     }
+   
+     .nav div.logo {
+       padding-left: 1.5em;
+     }
+   
+     #navbar-logo-image {
+       max-height: 6vh;
+     }
+   
+     #navbar-name {
+       font-size: 4vh;
+     }
+   
+     /* Initially hide the main list (will be toggled via JS) */
+     .nav div.main_list {
+       width: 100%;
+       height: 0;
+       overflow: hidden;
+     }
+     .nav div.main_list ul {
+       flex-direction: column;
+       width: 100%;
+       background-color: #bdddfc;
+       padding-top: 20px;
+     }
+     .nav div.main_list ul li {
+       width: 100%;
+       text-align: center;
+       padding: 10px 0;
+       font-size: 1.1rem;
+     }
+   
+     /* Resources box for tablets */
+     .resources-box {
+       top: 20vh;
+       left: 5vw;
+     }
+   
+     .navTrigger {
+       display: block;
+     }
+   }
+   
+   /* --- Desktops (min-width: 1025px) --- */
+   @media screen and (min-width: 1025px) {
+     .nav {
+       width: 80%;
+       height: 10vh;
+       margin-top: 60px;
+       border-radius: 35px;
+     }
+   
+     .nav div.logo {
+       padding-left: 3em;
+       margin-top: 1vh;
+     }
+   
+     .nav div.main_list {
+       height: 11vh;
+       float: right;
+       padding-right: 4vh;
+       max-width: 50vw;
+     }
+     .nav div.main_list ul {
+       flex-direction: row;
+     }
+     .nav div.main_list ul li {
+       padding-right: 3em;
+       font-size: 1.3em;
+     }
+   
+     /* Hide nav trigger on desktop */
+     .navTrigger {
+       display: none;
+     }
+   }
+   
+   /* --- Extra-Large Screens (min-width: 1600px) --- */
+   @media screen and (min-width: 1600px) {
+     .nav {
+       width: 70%;
+       margin-top: 60px;
+     }
+   
+     #navbar-name {
+       font-size: 4.5vh;
+     }
+   }
+   
+   /* --- Very Large Screens (min-width: 3000px) ---
+        (Existing, e.g., for large wall displays) */
+   @media screen and (min-width: 3000px) {
+     .container {
+       display: flex;
+       align-items: center;
+       justify-content: space-around;
+     }
+   }
+   
