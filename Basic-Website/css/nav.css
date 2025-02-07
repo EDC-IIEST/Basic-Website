@@ -9,6 +9,21 @@ body {
   font-size: 1vh;
 }
 
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+ }
+
+ @font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins/Poppins-Medium.ttf);
+ }
+ 
+ @font-face {
+  font-family: Nunito;
+  src: url(../fonts/Nunito/Nunito-VariableFont_wght.ttf);
+ }
+
 /* ---- Hovering Effect ---------
 ------------------------------------------ */
 #mainListDiv > ul > li > a {
@@ -63,6 +78,9 @@ body {
   text-align: center;
   padding-top: 1vh;
   z-index: 10000;
+  background-color: white ;
+  border-radius: 7px;
+  opacity: 0.5;
 }
 
 .nav div.logo {
@@ -85,6 +103,7 @@ body {
 .navlinks {
   justify-content: space-evenly;
   gap: 3vw;
+  font-family: Poppins;
 }
 
 .nav div.main_list {
@@ -282,7 +301,7 @@ body {
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: #ffffff;
+     background-color: #bdddfc;;
     /*same background color of navbar*/
     background-position: center top;
   }
@@ -540,7 +559,7 @@ body {
 
 .affix {
   margin-top: 0;
-  background-color: #ffffff;
+  background-color: #ccccff;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   border-bottom: 2px solid #000030;

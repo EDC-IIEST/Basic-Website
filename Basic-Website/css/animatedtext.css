@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+  
+
+
+body {
+  font-family: "Play", sans-serif;
+  background-color: #000;
+  color: white;
+  overflow-x: hidden;
+}
+
+.Text_Nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+  height: fit-content;
+}
+
+.wrapper.four {
+  background-color: transparent;
+  font-size: 4.5rem;
+
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 200px;
+
+}
+
+.four .type {
+  padding: 2rem 1rem;
+  margin: auto;
+  width: auto;
+  animation: lights 5s 750ms linear infinite;
+}
+
+.four h3 {
+  width: 20ch;
+  color: white;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  margin: 3rem auto;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite alternate;
+  transition: color 0.3s ease-in-out;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 16ch;
+  }
+}
+
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.four h3::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  
+  mix-blend-mode: color-dodge;
+  opacity: 0;
+  pointer-events: none;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+
+
+.four h3:hover::before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .four {
+    font-size: 2rem;
+  }
+
+  .four h3 {
+    width: 17ch;
+    animation: typing 2.5s steps(14, end), blink-caret 0.5s step-end infinite alternate;
+  }
+}
+
+@media (max-width: 480px) {
+  .four {
+    font-size: 1.5rem;
+  }
+
+  .four h3 {
+    width: 17ch;
+    font-size: 23px;
+    animation: typing 3s steps(12, end), blink-caret 0.5s step-end infinite alternate;
+  }
+}
+
+

@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700');
+
+* {
+  font-family: 'Open Sans';
+  box-sizing: border-box;
+  text-align: center;
+  color: #fff;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+}
+
+figure {
+  margin: 0;
+  position: relative;
+}
+
+figure h1 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border-right: 3px solid #fff;
+  padding: 5px 10px 5px 5px;
+}
+
+video {
+  width: 100%;
+  max-width: 100%;
+}
+
+.stretch {
+  height: 1700px;
+  background: black;
+  min-height: 100%;
+  min-width: 100%;
+  background-size:cover ;
+  margin-top: 600px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+}
+
+.stretch h1 {
+  padding: 20px;
+}
+
+.hero-wrapper {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 400px;
+  width: auto;
+  min-height: 100%;
+  min-width: 100%;
+  z-index: -9999;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .stretch {
+    margin-top: 250px;
+  }
+  figure h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stretch {
+    height: 2000px;
+  }
+  figure h1 {
+    font-size: 18px;
+    top: 10px;
+    left: 10px;
+  }
+  video{
+    margin-top: 280px ;
+    height: 300px;
+    width: 2000px;
+  }
+
+  .fast-scroll-section {
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-behavior: auto; /* Customize here */
+  }
+  
+}
+
+@media (max-width: 480px) {
+  figure h1 {
+    font-size: 16px;
+  }
+  .stretch {
+    margin-top: 190px;
+    height: 2000px;
+  }
+  video {
+    height: auto;
+  }
+}

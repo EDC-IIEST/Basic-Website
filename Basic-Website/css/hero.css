@@ -1,112 +1,185 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    min-height: 100vh;
-  }
-  
-  header {
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-  }
-  
-  .nav-links li {
-    margin-left: 20px;
-  }
-  
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  .menu-toggle {
-    display: none;
-    cursor: pointer;
-  }
-  
-  .menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 5px 0;
-  }
-  
-  .hero {
-    margin-top: 10vh;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  
-  .hero-content {
-    text-align: center;
-    color: white;
-  }
-  
+
+
+/* Header Section */
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+section:first-child{
+  position: relative;
+  height:100px;
+}
+section .title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top:-35.5px;
+  margin-left: -91.4px;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 10px;
+}
+
+.p-one{
+  background:  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://s-media-cache-ak0.pinimg.com/originals/27/05/74/2705741f272606db11ac1ae9938f2e93.jpg'); 
+
+ }
+
+ .main {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.parallax-inner{
+  position:relative;
+  min-height: 500px;
+  background-position: top center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.parallax-inner > h2{
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -20.5px;
+  width: 100%;
+  text-align: center;
+}
+.content-text p{
+  padding: 25px 50px 25px 50px;
+  font-weight: 400;
+  text-align: justify;
+  line-height: 24px;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+/* Fixed Video Section */
+.hero {
+  width: 100%;
+  height:500px; /* Set fixed height */
+  position: fixed ; /* Fixed to the viewport */
+  margin-top: 200px;
+ 
+  z-index: -1;
+  left: 0;
+  pointer-events: none; /* Disable interaction with the video */
+}
+
+
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the entire section */
+}
+
+/* Hero Content */
+.hero-content {
+  text-align: center;
+  color: white;
+  z-index: 1; /* Ensure the content is above the video */
+  position: relative; /* Positioned above the video */
+  top: 30%; /* Adjust content position */
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero p {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.hero-btn {
+  display: inline-block;
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #ddd;
+}
+
+/* Content Section - Scrollable Content Below the Hero Section */
+.content {
+  padding-top: 450px; /* Space below the fixed video section */
+  padding-bottom: 50px; /* Bottom padding for better scrolling experience */
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
   .hero h1 {
-    font-size: 48px;
-  }
-  
-  .hero p {
-    font-size: 24px;
-    margin: 20px 0;
-  }
-  .hero video{
-      width: 100%;
-  }
-  .hero-btn {
-    display: inline-block;
-    background-color: #fff;
-    color: #333;
-    padding: 10px 20px;
-    font-size: 18px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-  }
-  
-  .hero-btn:hover {
-    background-color: #ddd;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 1024px) {
-    .hero h1 {
       font-size: 36px;
-    }
-  
-    .hero p {
+  }
+
+  .hero p {
       font-size: 20px;
-    }
-  
-    .nav-links {
+  }
+
+  .nav-links {
       display: none;
-    }
-  
-    .menu-toggle {
+  }
+
+  .menu-toggle {
       display: block;
-    }
-  
-    .nav-links.show {
+  }
+
+  .nav-links.show {
       display: flex;
       flex-direction: column;
       position: absolute;
@@ -115,70 +188,65 @@ body {
       background-color: #333;
       width: 200px;
       border-radius: 5px;
-    }
-  
-    .nav-links li {
-      margin: 15px 0;
-    }
   }
-  
-  @media (max-width: 768px) {
-    .hero h1 {
+
+  .nav-links li {
+      margin: 15px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
       font-size: 28px;
-    }
-  
-    .hero p {
+  }
+
+  .hero p {
       font-size: 18px;
-    }
-  
-    .hero-btn {
+  }
+
+  .hero-btn {
       font-size: 16px;
       padding: 8px 16px;
-    }
   }
-  
-  @media (min-width: 2560px) {
-    .hero h1 {
+}
+
+@media (min-width: 2560px) {
+  .hero h1 {
       font-size: 64px;
-    }
-  
-    .hero p {
+  }
+
+  .hero p {
       font-size: 32px;
-    }
-  
-    .hero-btn {
+  }
+
+  .hero-btn {
       font-size: 22px;
       padding: 15px 25px;
-    }
   }
+}
 
-  
-  
+/* Custom Button Styles */
+.button-10 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -1vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
+  background-origin: border-box;
+  box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
 
-  
-  /* CSS */
-  .button-10 {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -1vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 6px 14px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
-    border-radius: 6px;
-    border: none;
-  
-    color: #fff;
-    background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
-     background-origin: border-box;
-    box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-  }
-  
-  .button-10:focus {
-    box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
-    outline: 0;
-  }
+.button-10:focus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
