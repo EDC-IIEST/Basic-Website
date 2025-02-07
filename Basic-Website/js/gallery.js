@@ -24,11 +24,11 @@ window.onload = ()=>{
   }
 }
 
-const previewBox = document.querySelector(".preview-box"),
-categoryName = previewBox.querySelector(".title p"),
-previewImg = previewBox.querySelector("img"),
-closeIcon = previewBox.querySelector(".icon"),
-shadow = document.querySelector(".shadow");
+const previewBox = document.querySelector(".preview-box");
+const categoryName = previewBox.querySelector(".title p");
+const previewImg = previewBox.querySelector("img");
+const closeIcon = previewBox.querySelector(".icon");
+const shadow = document.querySelector(".shadow");
 
 function preview(element){
 
