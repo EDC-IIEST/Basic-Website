@@ -1,5 +1,5 @@
 const counterElement = document.getElementById('counter');
-const targetNumber = 34235;
+const targetNumber = 30000;
 const speed = 100; // Adjust for faster/slower counting
 
 // Function to start the counter from 0 to the target
@@ -12,7 +12,7 @@ function startCounter() {
     if (currentNumber < targetNumber) {
       currentNumber += increment;
       if (currentNumber > targetNumber) currentNumber = targetNumber;
-      counterElement.innerText = currentNumber.toLocaleString();
+      counterElement.innerText = currentNumber.toLocaleString()+'+';
       requestAnimationFrame(updateCounter);
     }
   }

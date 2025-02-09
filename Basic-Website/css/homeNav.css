@@ -52,7 +52,7 @@
       Navbar & Home Section Styles
       ------------------------------- */
    .nav {
-     width: 80%;
+     width: 90vw;
      height: 10vh;
      margin-top: 60px;
      position: absolute;
@@ -70,7 +70,7 @@
      float: left;
      width: auto;
      height: auto;
-     padding-left: 3em;
+     padding-left: 1vw;
      margin-top: 1vh;
    }
    
@@ -297,7 +297,7 @@
    
      .nav div.logo {
        padding-left: 1em;
-       margin-top: 0;
+       
      }
    
      #navbar-logo-image {
@@ -410,14 +410,14 @@
    /* --- Desktops (min-width: 1025px) --- */
    @media screen and (min-width: 1025px) {
      .nav {
-       width: 80%;
+       width: 90%;
        height: 10vh;
        margin-top: 60px;
        border-radius: 35px;
      }
    
      .nav div.logo {
-       padding-left: 3em;
+       padding-left: 1em;
        margin-top: 1vh;
      }
    

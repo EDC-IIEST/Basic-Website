@@ -7,7 +7,7 @@
 }
 
 .minInfo {
-  max-width: 700px;
+  max-width: 45vw;
   margin-left: 70px;
   text-align: left;
   line-height: 30px;
@@ -137,7 +137,8 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 180px;
+  gap: 20px;
+  margin-top: 10vh;
 }
 
 /* -------------------------------- */
@@ -206,7 +207,7 @@
     font-size: 3rem;
   }
   .btn-Div {
-    margin-top: 100px;
+    margin-top: 10vh;
   }
   .animated-button {
     padding: 12px 24px;
@@ -217,8 +218,9 @@
 /* For Very Small Devices */
 @media screen and (max-width: 480px) {
   .minInfo {
-    font-size: 16px;
-    margin: 10px;
+    font-size: 1em;
+    max-width: 90vw;
+    
   }
   .mainImage {
     width: 90%;

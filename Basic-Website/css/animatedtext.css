@@ -21,7 +21,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 60vh;
+  min-height: 80vh;
   background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
   height: fit-content;
 }
