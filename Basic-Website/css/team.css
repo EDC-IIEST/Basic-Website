@@ -140,6 +140,7 @@ nav.nav {
   row-gap: 20px; /* Adds space between rows */
   width: 100vw;
   margin: auto auto;
+  margin-bottom: 10vh;
 }
 
 
