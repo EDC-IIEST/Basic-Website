@@ -58,11 +58,15 @@ html, body {
 }
 
 .text-container {
-    background: #000;
+    background-image: url('images/first.jpg');
+    background-size: contain;
+    filter: blur(1px);
+    background-size: cover;
+    background-position: center;
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 2vh;
     position: relative;
     overflow: hidden;
     padding-top: 40px;
@@ -108,6 +112,13 @@ html, body {
     animation-delay: 2s;
 }
 
+@media  (max-width: 768px) {
+    .text-container {
+        font-size: 1.5vh;
+        height: 60vh;
+    }
+  
+}
 @keyframes come2life {
     0% {
         transform: scale3d(0,0,1) rotate(0.02deg);
@@ -137,7 +148,56 @@ html, body {
 
 </style>
 
+<style>
+  /* Hide main content initially */
+#main-content {
+    display: none;
+}
+
+/* Video Loader Styling */
+#video-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#video-loader video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+</style>
 <body >
+  <div id="video-loader">
+    <video id="loader-video" autoplay muted>
+        <source src="video_and_images/fvideo - Made with Clipchamp.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById("loader-video");
+    const loader = document.getElementById("video-loader");
+    const mainContent = document.getElementById("main-content");
+
+    // When the video ends, hide the loader and show the main content
+    video.onended = function () {
+        loader.style.display = "none"; // Hide video loader
+        mainContent.style.display = "block"; // Show main content
+    };
+});
+
+</script>
+
+<div id="main-content">
+
 <div class="Text_Nav">
   <nav class="nav">
     <div class="container">
@@ -168,7 +228,7 @@ html, body {
         </span>
 
 </nav>
-
+</div>
 <div class="text-container">
   <div class="quote">Create the future yourself.</div>
 <div class="quote">Unhappy customers teach the most.</div>
@@ -181,25 +241,17 @@ html, body {
  
     <div class="type">
       
-        <h3 class="typing" style="font-size: 5rem;" >EDC IIEST SHIBPUR</h3>
+        <h3 class="typing"  >EDC IIEST SHIBPUR</h3>
     </div>
   </div>
   
   </div>
-</div>
+
       
 
 
 
-<div class="hero-wrapper fast-scroll-section">
-  
-    <figure>
-      <video autoplay muted loop playsinline src="/Basic-Website/video_and_images/video.mp4"></video>
-        
-   
-    </figure>
- 
-</div>
+
 
 <div class="stretch">
   
@@ -244,7 +296,7 @@ html, body {
 
       </div>
         
-      <div class="btn-Div" style="margin-bottom: 15vh;">
+      <div class="btn-Div" >
 
   <button class="animated-button">
   <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
@@ -388,7 +440,8 @@ window.addEventListener('scroll', () => {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 
 <script src="/Basic-Website/js/counter.js"></script>
-
+<script src="/Basic-Website/js/nav.js"></script>
+</div>
 </body>
 
 </html>

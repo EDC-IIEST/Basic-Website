@@ -21,21 +21,24 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
   background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
   height: fit-content;
 }
 
 .wrapper.four {
   background-color: transparent;
-  font-size: 4.5rem;
+  font-size: 20px;
 
   text-align: center;
   margin-top: 200px;
   margin-bottom: 200px;
+  max-width: 100vw;
 
 }
 
+.typing{
+  font-size: 5rem;
+}
 .four .type {
   padding: 2rem 1rem;
   margin: auto;
@@ -45,12 +48,12 @@ body {
 
 .four h3 {
   width: 20ch;
-  color: white;
+  color: Black;
   font-family: "Montserrat", serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
-  margin: 3rem auto;
+  margin: auto auto;
   white-space: nowrap;
   overflow: hidden;
   animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite alternate;
@@ -107,23 +110,27 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
   .four {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 
   .four h3 {
     width: 17ch;
     animation: typing 2.5s steps(14, end), blink-caret 0.5s step-end infinite alternate;
   }
+  .typing{
+    font-size: 3rem;
+  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 780px) {
   .four {
-    font-size: 1.5rem;
+    font-size: 20px;
   }
-
+  .typing{
+    font-size: 2rem;
+  }
   .four h3 {
-    width: 17ch;
-    font-size: 23px;
+    font-size: 2rem;
     animation: typing 3s steps(12, end), blink-caret 0.5s step-end infinite alternate;
   }
 }

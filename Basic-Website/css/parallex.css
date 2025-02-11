@@ -39,7 +39,6 @@ video {
   min-height: 100%;
   min-width: 100%;
   background-size:cover ;
-  margin-top: 100vh;
   display: flex;
   flex-direction: column;
   padding-top: 100px;
@@ -60,9 +59,7 @@ video {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .stretch {
-    margin-top: 250px;
-  }
+ 
   figure h1 {
     font-size: 24px;
   }
@@ -101,10 +98,7 @@ video {
   figure h1 {
     font-size: 16px;
   }
-  .stretch {
-    margin-top: 190px;
-    height: 2000px;
-  }
+ 
   video {
     height: auto;
   }
