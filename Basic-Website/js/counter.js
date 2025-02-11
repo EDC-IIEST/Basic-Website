@@ -11,8 +11,13 @@ function startCounter() {
 
     if (currentNumber < targetNumber) {
       currentNumber += increment;
-      if (currentNumber > targetNumber) currentNumber = targetNumber;
-      counterElement.innerText = currentNumber.toLocaleString();
+      if (currentNumber > targetNumber){
+        currentNumber = targetNumber ;
+        counterElement.innerText = currentNumber.toLocaleString() + "+";
+      }
+      else{
+      counterElement.innerText = currentNumber.toLocaleString() ;
+      }
       requestAnimationFrame(updateCounter);
     }
   }

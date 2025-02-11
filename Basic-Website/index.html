@@ -55,6 +55,7 @@ html, body {
     margin: 0;
     color: #fff;
     font-family: Arial;
+    
 }
 
 .text-container {
@@ -72,50 +73,50 @@ html, body {
     animation: come2life linear 10s infinite;
     transform-origin: center center;
     opacity: 0;
-    width: 250px;
-    height: 200px;
+    width: 20vw;
+    height: 15vh;
     position: absolute;
     backface-visibility: hidden;
 }
 
 .text-container > .quote:nth-child(1) {
-    left: 30vw;
-    top: 30vh;
+    left: 20%;
+    top: 20%;
     animation-delay: 0s;
 }
 
 .text-container > .quote:nth-child(2) {
-    left: 70vw;
-    top: 30vh;
+    left: 70%;
+    top: 30%;
     animation-delay: 4s;
 }
 
 .text-container > .quote:nth-child(3) {
-    left: 50vw;
-    top: 50vh;
+    left: 50%;
+    top: 50%;
     animation-delay: 8s;
 }
 
 .text-container > .quote:nth-child(4) {
-    left: 30vw;
-    top: 70vh;
+    left: 30%;
+    top: 70%;
     animation-delay: 6s;
 }
 
 .text-container > .quote:nth-child(5) {
-    left: 70vw;
-    top: 70vh;
+    left: 75%;
+    top: 75%;
     animation-delay: 2s;
 }
 
 @keyframes come2life {
     0% {
-        transform: scale3d(0,0,1) rotate(0.02deg);
+        transform: scale3d(0, 0, 1) rotate(0.02deg);
         opacity: 0;
         filter: blur(10px);
     }
     25% {
-        transform: scale3d(1,1,1) rotate(0.02deg);
+        transform: scale3d(1, 1, 1) rotate(0.02deg);
         opacity: 0.6;
         filter: blur(0px);
     }
@@ -123,65 +124,112 @@ html, body {
         opacity: 0.6;
         filter: blur(0px);
     }
-
     80% {
-      opacity: 0;
+        opacity: 0;
     }
-  
     100% {
-        transform: scale3d(4,4,1) rotate(0.02deg);
+        transform: scale3d(4, 4, 1) rotate(0.02deg);
         filter: blur(10px);
     }
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .text-container {
+        font-size: 16px;
+    }
+    
+    .text-container > .quote {
+        width: 30vw;
+        height: 20vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-container {
+        font-size: 14px;
+    }
+
+    .text-container > .quote {
+        width: 40vw;
+        height: 25vh;
+    }
+
+    .text-container > .quote:nth-child(1) {
+        left: 15%;
+        top: 15%;
+    }
+
+    .text-container > .quote:nth-child(2) {
+        left: 60%;
+        top: 20%;
+    }
+
+    .text-container > .quote:nth-child(3) {
+        left: 45%;
+        top: 45%;
+    }
+
+    .text-container > .quote:nth-child(4) {
+        left: 25%;
+        top: 65%;
+    }
+
+    .text-container > .quote:nth-child(5) {
+        left: 65%;
+        top: 70%;
+    }
+}
+
+
+/* Base styles */
+
 
 </style>
 
-<body >
+<body style="background-color: rgb(19, 19, 19);">
 <div class="Text_Nav">
   <nav class="nav">
     <div class="container">
         <div class="logo">
-            <img id="navbar-logo-image" src="video_and_images/logo.png" alt="logo">
-
+            <a href="/">
+                <img id="navbar-logo-image" src="video_and_images/logo.png" alt="EDC IIEST Logo">
+            </a>
         </div>
         <div id="mainListDiv" class="main_list">
             <ul class="navlinks">
-                <li><a href="/">Home</a></li>
+                <li><a href="/" class="active">Home</a></li>
                 <li><a href="/events.html">Events</a></li>
                 <li><a href="/team.html">Team</a></li>
-
                 <li><a href="/gallary.html">Gallery</a></li>
-
-               
                 <li><a href="/contact.html">Contact us</a></li>
-
-                <!-- <li><a href="/blog">Explore</a></li> -->
-
             </ul>
         </div>
+        <div class="mobile-menu">
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
     </div>
-        <span class="navTrigger">
-            <i></i>
-            <i></i>
-            <i></i>
-        </span>
-
 </nav>
 
-<div class="text-container">
-  <div class="quote">Hello, This is block of a text</div>
-  <div class="quote">Hello, This is another block of text</div>
-  <div class="quote">Hello, This is yet another block of text</div>
-  <div class="quote">Hello, This is also a block of text</div>
-  <div class="quote">Hello, This is the last block of text</div>
+<div class="text-container" style="background-color: rgb(19, 19, 19);">
+  <div class="quote">Dream big. Start small. Act now</div>
+  <div class="quote">Success is built on persistence, not perfection</div>
+  <div class="quote">Don’t wait for opportunity—create it</div>
+  <div class="quote">Failure is a step closer to success</div>
+  <div class="quote">Risk it until it becomes your reward</div>
+  
+  
 
-  <div class="wrapper four">
+  <div class="wrapper four" style="background-color: rgb(19, 19, 19);">
     
  
     <div class="type">
       
-        <h3 class="typing" style="font-size: 5rem;" >EDC IIEST SHIBPUR</h3>
+        <h3 class="typing" id="tagline">EDC IIEST SHIBPUR</h3>
     </div>
   </div>
   
@@ -264,9 +312,52 @@ html, body {
 
       </div>
 
+      <footer class="footer-section">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-logo">
+              <img src="video_and_images/logo.png" alt="EDC IIEST Logo" width="150">
+              <p>Fostering innovation and entrepreneurship at IIEST Shibpur</p>
+            </div>
+            <div class="footer-links">
+              <div class="link-column">
+                <h4>Quick Links</h4>
+                <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/events.html">Events</a></li>
+                  <li><a href="/team.html">Team</a></li>
+                  <li><a href="/gallary.html">Gallery</a></li>
+                  <li><a href="/contact.html">Contact</a></li>
+                </ul>
+              </div>
+              <div class="link-column">
+                <h4>Resources</h4>
+                <ul>
+                  <li><a href="#">Startup Guide</a></li>
+                  <li><a href="#">Mentorship</a></li>
+                  <li><a href="#">Incubation</a></li>
+                  <li><a href="#">Blog</a></li>
+                </ul>
+              </div>
+              <div class="link-column">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </footer>
+
 </div>
 
   <!-- Site footer -->
+    <!-- Site footer -->
   
 
 
@@ -286,7 +377,7 @@ window.addEventListener('scroll', () => {
 <script src="https://kit.fontawesome.com/9f1d966d1d.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-
+<script src="/Basic-Website/js/homeNav.js"></script>
 <script src="/Basic-Website/js/counter.js"></script>
 
 </body>

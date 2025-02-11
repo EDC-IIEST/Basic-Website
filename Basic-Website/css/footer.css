@@ -1,7 +1,7 @@
 @font-face {
   font-family: Montserrat;
-  src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
-}
+  src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+} 
 
 @font-face {
   font-family: Poppins;
@@ -9,145 +9,128 @@
 }
 
 @font-face {
-  font-family: Nunito;
-  src: url(../fonts/Nunito/Nunito-VariableFont_wght.ttf);
+  font-family: NotoSans;
+  src: url(../fonts/Noto_Sans/NotoSans-VariableFont_wdth\,wght.ttf);
 }
 
-.footer {
+
+.footer-section {
+  background-color: white;
+  color: black;
+  padding: 4rem 1rem 1rem;
+  font-family: NotoSans;
+  height: 45vh;
+  margin-top: 11vh;
+}
+
+.footer-content {
   display: flex;
   flex-wrap: wrap;
-  margin-top: -5vh;
-  padding: 30px;
-  color: #060507;
-  background-color: #fff;
-  border-top: 3px solid #000055;
-  position: relative;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
-.footer > * {
-  flex: 1 1 100%;
+.footer-logo {
+  flex: 1;
+  min-width: 250px;
 }
 
-.footer__addr {
-  margin-right: 1.25em;
-  margin-bottom: 1em;
+.footer-logo p {
+  margin-top: 1rem;
+  color: #888;
 }
 
-.footer__addr img {
-  max-width: 100%;
-  height: auto;
-}
-
-.footer__logo {
-  font-family: "Cabin Sketch", sans-serif;
-  font-weight: 400;
-  font-size: 2rem;
-}
-
-.footer__addr h2 {
-  margin-top: 1.3em;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.nav__title {
-  font-weight: 800;
-  font-size: 15px;
-  color: #000;
-}
-
-.footer address {
-  font-style: normal;
-  font-size: 1.3rem;
-  color: #000055;
-}
-
-.footer__btn {
+.footer-links {
+  flex: 2;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 36px;
-  max-width: max-content;
-  background-color: rgba(33, 33, 33, 0.07);
-  border-radius: 100px;
-  color: #000055;
-  line-height: 0;
-  margin: 0.6em 0;
-  font-size: 1rem;
-  padding: 0 1.3em;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
-.footer ul {
+.link-column h4 {
+  color: #333;
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.link-column ul {
   list-style: none;
   padding: 0;
 }
 
-.footer li {
-  line-height: 3em;
+.link-column ul li {
+  margin-bottom: 0.8rem;
 }
 
-.footer a {
+.link-column ul li a {
+  color: #555;
   text-decoration: none;
-  font-size: 1.5rem;
+  transition: color 0.3s ease;
 }
 
-.footer__nav {
+.link-column ul li a:hover {
+  color: #000;
+}
+
+.social-links {
   display: flex;
-  flex-wrap: wrap;
-  max-width: 100%;
+  gap: 1rem;
 }
 
-.footer__nav > * {
-  flex: 1 1 50%;
-  margin-right: 1.25em;
+.social-links a {
+  color: #555;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
 }
 
-.nav__ul a {
-  color: #000055;
+.social-links a:hover {
+  color: #000;
 }
 
-.nav__ul--extra {
-  column-count: 2;
-  column-gap: 1.25em;
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
 }
 
-.legal {
-  display: flex;
-  flex-wrap: wrap;
-  color: #000055;
+.footer-bottom p {
+  color: #555;
+  font-size: 0.9rem;
 }
 
-.legal__links {
-  display: flex;
-  align-items: center;
-}
-
-.heart {
-  color: #000055;
-}
-
-@media screen and (min-width: 390px) {
-  .legal .legal__links {
-    margin-left: auto;
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+  .footer-section {
+    padding: 2rem 0.5rem;
+    height: fit-content;
   }
-}
 
-@media screen and (min-width: 645px) {
-  .footer__nav > * {
-    flex: 1 1 auto;
+  .footer-content {
+    gap: 1.5rem;
   }
   
-  .nav__item--extra {
-    flex-grow: 2;
-  }
   
-  .footer__addr {
-    flex: 1 0 auto;
-  }
   
-  .footer__nav {
-    flex: 2 0 auto;
+  .footer-bottom p {
+    font-size: 0.8rem;
   }
 }
+
+/* Small screens (phones) */
+@media (max-width: 576px) {
+  .footer-section {
+    padding: 2rem 0.5rem;
+    height: fit-content;
+  }
+
+  .footer-content {
+    gap: 1.5rem;
+  }
+  
+  
+  
+  .footer-bottom p {
+    font-size: 0.8rem;
+  }

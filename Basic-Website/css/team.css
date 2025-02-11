@@ -1,3 +1,19 @@
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+} 
+ 
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins/Poppins-Medium.ttf);
+}
+ 
+@font-face {
+    font-family: NotoSans;
+    src: url(../fonts/Noto_Sans/NotoSans-VariableFont_wdth\,wght.ttf);
+}
+ 
+ 
  :root {
             --primary-color: #3b82f6;
             --text-color: #1f2937;
@@ -12,7 +28,7 @@
             gap: 24px;
             max-width: 1200px;
             margin: 0 auto;
-            
+            font-family: NotoSans;
            
         }
 
@@ -30,6 +46,50 @@
         .team-card:hover {
             transform: translateY(-5px) rotate(2deg);
             box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+            
+        }
+
+
+        .card-content {
+            padding: 24px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .card-name,
+        .card-role {
+            transition: opacity 0.3s ease;
+        }
+        
+        .team-card:hover .card-name,
+        .team-card:hover .card-role {
+            opacity: 0;
+        }
+        
+        .card-button {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            transform-origin: center;
+            position: relative;
+            z-index: 3;
+        }
+        
+        .team-card:hover .card-button {
+            background-color: var(--hover-color);
+            color: var(--text-color);
+        }
+        
+        
+
+        .overlay-content :hover{
+            z-index: 234;
         }
 
         .card-image {
@@ -82,6 +142,7 @@
         .team-card:hover .card-button {
             background-color: var(--hover-color);
             color: var(--text-color);
+            
         }
 
         .card-button:hover {

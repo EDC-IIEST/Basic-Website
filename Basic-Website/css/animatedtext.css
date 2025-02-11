@@ -43,6 +43,10 @@ body {
   animation: lights 5s 750ms linear infinite;
 }
 
+#tagline{
+   font-size: 4.5rem;
+}
+
 .four h3 {
   width: 20ch;
   color: white;
@@ -110,6 +114,10 @@ body {
     font-size: 2rem;
   }
 
+ #tagline{
+  font-size: 3rem;
+ }
+
   .four h3 {
     width: 17ch;
     animation: typing 2.5s steps(14, end), blink-caret 0.5s step-end infinite alternate;
@@ -119,6 +127,10 @@ body {
 @media (max-width: 480px) {
   .four {
     font-size: 1.5rem;
+  }
+
+  #tagline{
+    font-size: 1.5rem ;
   }
 
   .four h3 {

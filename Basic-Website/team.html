@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/homeNav.css" />
     <link rel="stylesheet" href="css/hero.css" />
     <link rel="stylesheet" href="css/infopage.css" />
     <link rel="stylesheet" href="css/getstarted.css" />
@@ -13,123 +13,80 @@
     <link rel="stylesheet" href="css/ourmission.css" />
     <link rel="stylesheet" href="css/team.css" />
   </head>
-  <body>
+  <body  style="background-color: rgb(19, 19, 19);">
     <nav class="nav">
       <div class="container">
-        <div class="logo">
-          <img id="navbar-logo-image" src="video_and_images/logo.png" alt="logo" />
-        </div>
-        <div id="mainListDiv" class="main_list">
-          <ul class="navlinks">
-            <li><a href="/">Home</a></li>
-            <li><a href="/events.html">Events</a></li>
-            <li><a href="/team.html">Team</a></li>
-            <li><a href="/gallary.html">Gallary</a></li>
-            <!-- <li><a href="/blog">Explore</a></li> -->
-          </ul>
-        </div>
+          <div class="logo">
+              <a href="/">
+                  <img id="navbar-logo-image" src="video_and_images/logo.png" alt="EDC IIEST Logo">
+              </a>
+          </div>
+          <div id="mainListDiv" class="main_list">
+              <ul class="navlinks">
+                  <li><a href="/" class="active">Home</a></li>
+                  <li><a href="/events.html">Events</a></li>
+                  <li><a href="/team.html">Team</a></li>
+                  <li><a href="/gallary.html">Gallery</a></li>
+                  <li><a href="/contact.html">Contact us</a></li>
+              </ul>
+          </div>
+          <div class="mobile-menu">
+              <span class="navTrigger">
+                  <i></i>
+                  <i></i>
+                  <i></i>
+              </span>
+          </div>
       </div>
-      <span class="navTrigger">
-        <i></i>
-        <i></i>
-        <i></i>
-      </span>
-    </nav>
+  </nav>
 
     <div class="eventhead">
-      <h1 class="Events">OUR TEAM</h1>
-    </div>
+      <h1 class="Events" style="color: white; font-family: Montserrat;">OUR TEAM</h1>
+    </div> 
 
     <div class="team-grid" id="teamGrid"></div>
 
-  <footer class="footer">
-    <div class="footer__addr">
-        <img src="video_and_images/logo.png" alt="">
-
-
-      <h2>Address</h2>
-
-      <address>
-    IIEST, shibpur<br>
-        Howrah, West Bengal, 711103
-      </address>
-    </div>
-
-    <ul class="footer__nav">
-      <li class="nav__item">
-        <h2 class="nav__title">Company</h2>
-
-        <ul class="nav__ul">
-          <li>
-            <a href="/">Home</a>
-          </li>
-
-          <li>
-            <a href="/events.html">Events</a>
-          </li>
-
-          <li>
-            <a href="/team.html">team</a>
-          </li>
-
-          <li>
-            <a href="/gallary.html">Gallary</a>
-          </li>
-
-        </ul>
-      </li>
-
-      <li class="nav__item ">
-        <h2 class="nav__title">Legal</h2>
-
-        <ul class="nav__ul">
-          <li>
-            <a href="mailto:iiests.edc@gmail.com">Help</a>
-          </li>
-
-          <li>
-            <a href="mailto:iiests.edc@gmail.com">Contact</a>
-          </li>
-
-          <li>
-            <a href="mailto:iiests.edc@gmail.com">Partnership</a>
-          </li>
-
-          <li>
-            <a href="mailto:iiests.edc@gmail.com">Privacy Policy</a>
-          </li>
-
-
-        </ul>
-      </li>
-
-      <li class="nav__item">
-        <h2 class="nav__title">Socials</h2>
-
-        <ul class="nav__ul">
-          <li>
-            <a href="https://www.linkedin.com/company/edciiests/">LinkedIn</a>
-          </li>
-
-          <li>
-            <a href="https://www.instagram.com/edc.iiests/profilecard/?igsh=MTBpd2dkNDFwbXFybg==">Facebook</a>
-          </li>
-
-          <li>
-            <a href="https://www.instagram.com/edc.iiests/profilecard/?igsh=MTBpd2dkNDFwbXFybg==">instagram</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-
-    <div class="legal">
-      <p>Copyright EDC IIEST. All rights reserved 2024</p>
-
-      <div class="legal__links">
-        <span>Designed with expertise by <a href="https://www.linkedin.com/in/harshrjn/" style="color: #242424; font-size: 12px;">Harsh Ranjan.</a></span>
+    <footer class="footer-section">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="video_and_images/logo.png" alt="EDC IIEST Logo" width="150">
+            <p>Fostering innovation and entrepreneurship at IIEST Shibpur</p>
+          </div>
+          <div class="footer-links">
+            <div class="link-column">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/events.html">Events</a></li>
+                <li><a href="/team.html">Team</a></li>
+                <li><a href="/gallary.html">Gallery</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <div class="link-column">
+              <h4>Resources</h4>
+              <ul>
+                <li><a href="#">Startup Guide</a></li>
+                <li><a href="#">Mentorship</a></li>
+                <li><a href="#">Incubation</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div>
+            <div class="link-column">
+              <h4>Connect With Us</h4>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
       </div>
-    </div>
-  </footer>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/nav.js"></script>
