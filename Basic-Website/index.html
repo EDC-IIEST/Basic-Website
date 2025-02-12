@@ -59,11 +59,15 @@ html, body {
 }
 
 .text-container {
-    background: #000;
+    background-image: url('images/first.jpg');
+    background-size: contain;
+    filter: blur(1px);
+    background-size: cover;
+    background-position: center;
     width: 100vw;
     height: 100vh;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 2vh;
     position: relative;
     overflow: hidden;
     padding-top: 40px;
@@ -109,6 +113,13 @@ html, body {
     animation-delay: 2s;
 }
 
+@media  (max-width: 768px) {
+    .text-container {
+        font-size: 1.5vh;
+        height: 60vh;
+    }
+  
+}
 @keyframes come2life {
     0% {
         transform: scale3d(0, 0, 1) rotate(0.02deg);
@@ -234,22 +245,12 @@ html, body {
   </div>
   
   </div>
-</div>
+
       
 
 
 
-<div class="hero-wrapper fast-scroll-section">
-  
-    <figure>
-      <video loop muted autoplay>
-        <source src="../Basic-Website/video_and_images/video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-   
-    </figure>
- 
-</div>
+
 
 <div class="stretch">
   
@@ -258,6 +259,7 @@ html, body {
       <div class="info">
 
          <div class="minInfo">
+          <h1 style="text-align: left; font-weight: 600;">About EDC</h1>
           Welcome to EDCell
           Entrepreneurship Development Cell was set up in the year 2009 under the AICTE initiative and is working
           under the guidance of the Department of Human Resources Management in co-ordination with NRDC-IIEST IFC,
@@ -281,7 +283,7 @@ html, body {
         <div class="countDiv">
 
         <div class="sub-countDiv" >
-        <div class="counter" id="counter">0</div>
+        <div class="counter" id="counter">0 +</div>
         <h3 style="color: white ; font-size: 1.7rem;">Social Reach</h3>
       </div>
 
@@ -293,7 +295,7 @@ html, body {
 
       </div>
         
-      <div class="btn-Div">
+      <div class="btn-Div" >
 
   <button class="animated-button">
   <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
@@ -301,7 +303,21 @@ html, body {
       d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
     ></path>
   </svg>
-  <span class="text">Join Our Community</span>
+  <span class="text">Follow On Instagram</span>
+  <span class="circle"></span>
+  <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+    ></path>
+  </svg>
+</button>
+<button class="animated-button">
+  <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+    ></path>
+  </svg>
+  <span class="text">Connect On LinkedIn</span>
   <span class="circle"></span>
   <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
     <path
@@ -360,6 +376,94 @@ html, body {
     <!-- Site footer -->
   
 
+  <footer class="footer" >
+    <div class="footer__addr">
+          <img src="video_and_images/logo.png" alt="">
+          <h2>Address</h2>
+          <address>
+                IIEST, shibpur<br>
+                Howrah, West Bengal, 711103
+          </address>
+    </div>
+
+    <ul class="footer__nav">
+          <li class="nav__item">
+                <h2 class="nav__title">Company</h2>
+
+                <ul class="nav__ul">
+                      <li>
+                            <a href="/">Home</a>
+                      </li>
+
+                      <li>
+                            <a href="/events.html">Events</a>
+                      </li>
+
+                      <li>
+                            <a href="/team.html">team</a>
+                      </li>
+
+                      <li>
+                            <a href="/gallary.html">Gallery</a>
+                      </li>
+
+                </ul>
+          </li>
+
+          <li class="nav__item ">
+                <h2 class="nav__title">Legal</h2>
+
+                <ul class="nav__ul">
+                      <li>
+                            <a href="mailto:iiests.edc@gmail.com">Help</a>
+                      </li>
+
+                      <li>
+                            <a href="mailto:iiests.edc@gmail.com">Contact</a>
+                      </li>
+
+                      <li>
+                            <a href="mailto:iiests.edc@gmail.com">Partnership</a>
+                      </li>
+
+                      <li>
+                            <a href="mailto:iiests.edc@gmail.com">Privacy Policy</a>
+                      </li>
+
+
+                </ul>
+          </li>
+
+          <li class="nav__item">
+                <h2 class="nav__title">Socials</h2>
+
+                <ul class="nav__ul">
+                      <li>
+                            <a href="https://www.linkedin.com/company/edciiests/">LinkedIn</a>
+                      </li>
+
+                      <li>
+                            <a
+                                  href="https://www.instagram.com/edc.iiests/profilecard/?igsh=MTBpd2dkNDFwbXFybg==">Facebook</a>
+                      </li>
+
+                      <li>
+                            <a
+                                  href="https://www.instagram.com/edc.iiests/profilecard/?igsh=MTBpd2dkNDFwbXFybg==">instagram</a>
+                      </li>
+                </ul>
+          </li>
+    </ul>
+
+    <div class="legal">
+          <p>Copyright EDC IIEST. All rights reserved 2024</p>
+
+          <div class="legal__links">
+                <span>Designed with expertise by <a href="https://www.linkedin.com/in/harshrjn/"
+                            style="color: #242424; font-size: 12px;">EDC WEB TEAM</a></span>
+          </div>
+    </div>
+</footer>
 
 
 <script>
@@ -379,7 +483,8 @@ window.addEventListener('scroll', () => {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 <script src="/Basic-Website/js/homeNav.js"></script>
 <script src="/Basic-Website/js/counter.js"></script>
-
+<script src="/Basic-Website/js/nav.js"></script>
+</div>
 </body>
 
 </html>
