@@ -1,23 +1,86 @@
-/* From Uiverse.io by zakareaaljundi */ 
-/* body{
-    background-color: rgb(51, 56, 68);
-} */
-
-/* body {
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
-} */
-@import url(https://fonts.googleapis.com/css?family=Lato:300,700,300italic);
-
-
-html, body {
-  height: 100%;
-  margin: 0; /* Ensures no default margin */
-  padding: 0; /* Ensures no default padding */
-  overflow-x: hidden; 
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+} 
+ 
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins/Poppins-Medium.ttf);
 }
+ 
+@font-face {
+    font-family: NotoSans;
+    src: url(../fonts/Noto_Sans/NotoSans-VariableFont_wdth\,wght.ttf);
+}
+ 
+ 
+ :root {
+            --primary-color: #3b82f6;
+            --text-color: #1f2937;
+            --background-color: #f3f4f6;
+            --card-background: #ffffff;
+            --hover-color: #4ade80;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+            font-family: NotoSans;
+           
+        }
+
+
+        .team-card:hover {
+            transform: translateY(-5px) rotate(2deg);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+            
+        }
+
+
+        .card-content {
+            padding: 24px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .card-name,
+        .card-role {
+            transition: opacity 0.3s ease;
+        }
+        
+        .team-card:hover .card-name,
+        .team-card:hover .card-role {
+            opacity: 0;
+        }
+        
+        .card-button {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            transform-origin: center;
+            position: relative;
+            z-index: 3;
+        }
+        
+        .team-card:hover .card-button {
+            background-color: var(--hover-color);
+            color: var(--text-color);
+        }
+        
+        
+
+        .overlay-content :hover{
+            z-index: 234;
+        }
 
 h1 {
   font-weight: normal;
@@ -77,8 +140,11 @@ body{
   /* background: rgb(134,26,84);
 background: linear-gradient(142deg, rgba(134,26,84,1) 0%, rgba(36,66,115,1) 51%, rgba(134,26,84,1) 100%); */
 
-  background: rgb(0, 4 , 34);
-}
+        .team-card:hover .card-button {
+            background-color: var(--hover-color);
+            color: var(--text-color);
+            
+        }
 
 h1 {
   color: white;

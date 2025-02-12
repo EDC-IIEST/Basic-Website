@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Carousel</title>
+    <link rel="stylesheet" href="./css/carousel.css">
+</head>
+<body>
+    <div class="outer-carousel-wrapper">
+        <div class="outer-carousel">
+            <div class="outer-carousel-item">
+                <div class="carousel">
+                    <div class="carousel__item">
+                        <div class="carousel__item-body">
+                            <img src="https://images.pexels.com/photos/30469701/pexels-photo-30469701/free-photo-of-gourmet-assortment-of-artistic-cuisine-dishes.jpeg" alt="Carousel Image 1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="outer-carousel-item">
+                <div class="carousel">
+                    <div class="carousel__item">
+                        <div class="carousel__item-body">
+                            <img src="https://images.pexels.com/photos/30556745/pexels-photo-30556745/free-photo-of-close-up-of-lush-wheat-field-during-summer.jpeg" alt="Carousel Image 2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="outer-carousel-item">
+                <div class="carousel">
+                    <div class="carousel__item">
+                        <div class="carousel__item-body">
+                            <img src="path/to/image3.jpg" alt="Carousel Image 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <button class="carousel-button left" aria-label="Previous slide">&#10094;</button>
+            <button class="carousel-button right" aria-label="Next slide">&#10095;</button>
+        </div>
+    </div>
+ 
+
+    <script>
+        /* filepath: /C:/Users/surya/OneDrive/Documents/GitHub/Basic-Website/Basic-Website/js/carousel.js */
+class Carousel {
+    constructor() {
+        this.currentIndex = 0;
+        this.carousel = document.querySelector('.outer-carousel');
+        this.items = document.querySelectorAll('.outer-carousel-item');
+        this.totalItems = this.items.length;
+        
+        this.initializeControls();
+    }
+
+    initializeControls() {
+        document.querySelector('.carousel-button.left').addEventListener('click', () => this.move(-1));
+        document.querySelector('.carousel-button.right').addEventListener('click', () => this.move(1));
+        this.addTouchSupport();
+    }
+
+    move(direction) {
+        this.currentIndex = (this.currentIndex + direction + this.totalItems) % this.totalItems;
+        this.updateCarousel();
+    }
+
+    updateCarousel() {
+        this.carousel.style.transform = `translateX(-${this.currentIndex * 100}%)`;
+    }
+
+    addTouchSupport() {
+        let startX, moveX;
+        
+        this.carousel.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+
+        this.carousel.addEventListener('touchmove', (e) => {
+            moveX = e.touches[0].clientX;
+        });
+
+        this.carousel.addEventListener('touchend', () => {
+            if (startX - moveX > 50) this.move(1);  // Swipe left
+            if (moveX - startX > 50) this.move(-1); // Swipe right
+        });
+    }
+}
+
+// Initialize carousel when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    new Carousel();
+});
+    </script>
+</body>
+</html>
